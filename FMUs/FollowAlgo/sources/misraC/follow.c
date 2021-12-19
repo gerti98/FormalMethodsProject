@@ -21,7 +21,7 @@ void init(State* st) {
 }
 
 /**
- * leave/enter functions
+ * leave/enter functionsmode
  */
 void enter(Mode m, State* st) { 
     st->mode = m;
