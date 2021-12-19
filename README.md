@@ -1,7 +1,7 @@
 # FormalMethodsProject
  
 
-# Dependencies
+## Dependencies
 - Lapack
 
 ```
