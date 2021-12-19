@@ -1,0 +1,295 @@
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar.o LeadCar.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_functions.o LeadCar_functions.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_records.o LeadCar_records.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_01exo.o LeadCar_01exo.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_02nls.o LeadCar_02nls.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_03lsy.o LeadCar_03lsy.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_04set.o LeadCar_04set.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_05evt.o LeadCar_05evt.c
+In file included from LeadCar_02nls.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:In file included from 71LeadCar_05evt.c:
+:In file included from 2./gc/../openmodelica_types.h:
+:In file included from 149./LeadCar_model.h:
+In file included from :./gc/omc_gc.hLeadCar_03lsy.c5:::
+2182In file included from ::
+./openmodelica.h28In file included from ::./LeadCar_model.h71 ::
+warning5In file included from : :
+./gc/../openmodelica_types.hexpression result unused [-Wunused-value]In file included from :
+./openmodelica.h149::
+71./gc/omc_gc.h:
+:In file included from 218./gc/../openmodelica_types.h::28149::
+   GC_register_displacement(0);./gc/omc_gc.hwarning
+::                            ^218expression result unused [-Wunused-value]
+:
+28./gc/omc_gc.h:: 222warning:: 34expression result unused [-Wunused-value]:
+   GC_register_displacement(0);warning
+:                            ^expression result unused [-Wunused-value]
+
+./gc/omc_gc.h:222  GC_register_displacement(0);:
+  GC_set_force_unmap_on_gcollect(1);34                           ^
+:
+                                 ^ 
+warning./gc/omc_gc.h: :expression result unused [-Wunused-value]222
+:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_04set.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar.c:7:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+In file included from LeadCar_records.c:4  GC_register_displacement(0);:
+
+In file included from                            ^./meta/meta_modelica.h
+:49:
+./gc/omc_gc.h./gc/omc_gc.h::222218::3428::  warningwarning: : expression result unused [-Wunused-value]expression result unused [-Wunused-value]
+
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_01exo.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_functions.c:2:
+In file included from ./LeadCar_functions.h:3:
+In file included from ./meta/meta_modelica.h:49:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+2 warnings generated.
+2 warnings generated.
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_06inz.o LeadCar_06inz.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_07dly.o LeadCar_07dly.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_08bnd.o LeadCar_08bnd.c
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_09alg.o LeadCar_09alg.c
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_10asr.o LeadCar_10asr.c
+2 warnings generated.
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_11mix.o LeadCar_11mix.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_12jac.o LeadCar_12jac.c
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_13opt.o LeadCar_13opt.c
+In file included from LeadCar_07dly.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_06inz.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_08bnd.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_09alg.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_10asr.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_12jac.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_11mix.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_13opt.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+2 warnings generated.
+2 warnings generated.
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_14lnz.o LeadCar_14lnz.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_15syn.o LeadCar_15syn.c
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_16dae.o LeadCar_16dae.c
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_17inl.o LeadCar_17inl.c
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_init_fmu.o LeadCar_init_fmu.c
+2 warnings generated.
+2 warnings generated.
+clang -Os -fPIC -mfpmath=sse -fno-dollars-in-identifiers  -I'/usr/bin/../include/omc/c/fmi' -DOMC_FMI_RUNTIME=1 -DCMINPACK_NO_DLL=1   -c -o LeadCar_FMU.o LeadCar_FMU.c
+2 warnings generated.
+In file included from LeadCar_16dae.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_14lnz.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_15syn.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_17inl.c:2:
+In file included from ./LeadCar_model.h:5:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+In file included from LeadCar_init_fmu.c:1:
+In file included from ./simulation_data.h:39:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+2 warnings generated.
+In file included from LeadCar_FMU.c:9:
+In file included from ./openmodelica.h:71:
+In file included from ./gc/../openmodelica_types.h:149:
+./gc/omc_gc.h:218:28: warning: expression result unused [-Wunused-value]
+  GC_register_displacement(0);
+                           ^
+./gc/omc_gc.h:222:34: warning: expression result unused [-Wunused-value]
+  GC_set_force_unmap_on_gcollect(1);
+                                 ^
+2 warnings generated.
+2 warnings generated.
+2 warnings generated.
+2 warnings generated.
+In file included from LeadCar_FMU.c:55:
+./fmi-export/fmu2_model_interface.c.inc:79:11: warning: enumeration value 'modelSlaveInitialized' not handled in switch [-Wswitch]
+  switch (comp->state)
+          ^
+./fmi-export/fmu2_model_interface.c.inc:168:16: warning: passing 'char **' to parameter of type 'const char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+  GC_vasprintf(&str, msg, args);
+               ^~~~
+./gc/../meta/../util/modelica_string.h:71:31: note: passing argument to parameter 'strp' here
+int GC_vasprintf(const char **strp, const char *fmt, va_list ap);
+                              ^
+In file included from LeadCar_FMU.c:55:
+./fmi-export/fmu2_model_interface.c.inc:1311:12: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+    if (vr < 0 || vr >= NUMBER_OF_REALS|| setReal(comp, vr, x[i]) != fmi2OK) { // to be implemented by the includer of this file
+        ~~ ^ ~
+LeadCar_FMU.c:134:10: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+  if (vr < 0) {
+      ~~ ^ ~
+LeadCar_FMU.c:137:10: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+  if (vr < 0) {
+      ~~ ^ ~
+LeadCar_FMU.c:144:10: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+  if (vr < 0) {
+      ~~ ^ ~
+LeadCar_FMU.c:148:10: warning: comparison of unsigned expression < 0 is always false [-Wtautological-compare]
+  if (vr < 0) {
+      ~~ ^ ~
+9 warnings generated.
+mkdir -p ../binaries/linux64
+clang -shared -o LeadCar.so LeadCar.o LeadCar_functions.o LeadCar_records.o LeadCar_01exo.o LeadCar_02nls.o LeadCar_03lsy.o LeadCar_04set.o LeadCar_05evt.o LeadCar_06inz.o LeadCar_07dly.o LeadCar_08bnd.o LeadCar_09alg.o LeadCar_10asr.o LeadCar_11mix.o LeadCar_12jac.o LeadCar_13opt.o LeadCar_14lnz.o LeadCar_15syn.o LeadCar_16dae.o LeadCar_17inl.o LeadCar_init_fmu.o LeadCar_FMU.o   -L"/home/maurizio/OM"  -Wl,-Bstatic  -Wl,-Bdynamic -L'/usr/bin/../lib/x86_64-linux-gnu/omc' -Wl,-rpath,'/usr/bin/../lib/x86_64-linux-gnu/omc'   -lSimulationRuntimeFMI  -Wl,--no-as-needed -Wl,--disable-new-dtags -llapack -lblas -lm -lm -lpthread -rdynamic -Wl,--no-undefined 
+cp LeadCar.so LeadCar_FMU.libs ../binaries/linux64/
+head -n20 Makefile > ../resources/linux64.summary
+make distclean
+make[1]: Entering directory '/tmp/OpenModelica_maurizio/OMEdit/LeadCar/LeadCar.fmutmp/sources'
+rm -f LeadCar.def LeadCar.o LeadCar.a LeadCar.so  LeadCar.o LeadCar_functions.o LeadCar_records.o LeadCar_01exo.o LeadCar_02nls.o LeadCar_03lsy.o LeadCar_04set.o LeadCar_05evt.o LeadCar_06inz.o LeadCar_07dly.o LeadCar_08bnd.o LeadCar_09alg.o LeadCar_10asr.o LeadCar_11mix.o LeadCar_12jac.o LeadCar_13opt.o LeadCar_14lnz.o LeadCar_15syn.o LeadCar_16dae.o LeadCar_17inl.o LeadCar_init_fmu.o LeadCar_FMU.o  
+rm -f Makefile config.status config.log
+make[1]: Leaving directory '/tmp/OpenModelica_maurizio/OMEdit/LeadCar/LeadCar.fmutmp/sources'
