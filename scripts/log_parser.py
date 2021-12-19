@@ -5,14 +5,16 @@ from tabulate import tabulate
 
 
 # COME USARE QUESTO SCRIPT
-# 1) Installare package che vengono importati (i.e. > python3 -m pip install tabulate)
+# 0) Questo script necessita di una versione di python >= 3.6
+#
+# 1) Eventualmente installare package che vengono importati (i.e. > python3.6 -m pip install tabulate)
 #
 # 2) Configurare rootdir come path per directory contenente i vari log delle co-simulazioni effettuate
 # i.e. "/mnt/c/Users/gxhan/Documents/FormalMethodsProject/Multi-models/VanillaCase/co-sim"
 #
 # 3) Runnare lo script
 
-rootdir = "/mnt/c/Users/gxhan/Documents/FormalMethodsProject/Multi-models/VanillaCase/co-sim"
+rootdir = "/home/student/into-cps-projects/leader_and_follower/FormalMethodsProject/Multi-models/VanillaCase/co-sim"
 
 log_directories = []
 for file in os.listdir(rootdir):
@@ -70,7 +72,7 @@ for log_directory in log_directories:
                 
             
             mean_distance = sum_distance/(line_count-1)
-            print(f'Processed {line_count} lines.')
+            print(f"Processed {line_count} lines")
             print(f"Max_follow_accel: {max_follow_accel}, Min_follow_Accel: {min_follow_accel}")
             print(f"Min_distance: {min_distance}, Max_distance: {max_distance}, Mean_distance: {mean_distance}")
             data_to_output.append([following_x0, mean_distance, max_distance, min_distance, max_follow_accel, min_follow_accel])
