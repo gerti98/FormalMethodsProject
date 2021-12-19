@@ -1,9 +1,9 @@
 # FormalMethodsProject
  
 
-# Dependencies
+## Dependencies
 - Lapack
 
-"""
+```
 sudo apt-get install liblapack-dev
-"""
+```
