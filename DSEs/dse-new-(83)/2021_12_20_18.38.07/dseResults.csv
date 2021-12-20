@@ -1,3 +1,0 @@
-Rank,max_x,max_accel,LeadingCarInstance.simple_car.v0,FollowingAlgorithmInstance.eps,FollowingAlgorithmInstance.omega_n,LeadingCarInstance.simple_car.x0,FollowingCarInstance.v0,FollowingAlgorithmInstance.c1,FollowingCarInstance.x0
-1,463.371388454,3.39573001862,5,1,0.2,50,0,0.5,0
-2,513.34627565,5.39573001862,5,1,0.2,100,0,0.5,0
