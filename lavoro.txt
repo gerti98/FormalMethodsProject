@@ -1,11 +1,11 @@
-1) VanillaCase
+1) VanillaCase V
 	a) Inserire 15m nel following algorithm fmu
 	b) Studiare impatto 3 parametri Following Algorithm, trovare 3 parametri fissi da usare.
 	c) Creare script python per analizzare log, output: Minumum Distance, Maximum Distance, Mean Distance, Accelerazione Max e Min 
 
 2) Crea MultiModel Attacchi
-	a) altera x tra Ego e Following Algo/Leading Car
-	b) altera accelerazione di Following Car
+	a) altera x tra Ego e Following Algo (Olgerti)
+	b) altera accelerazione di Following Car (Matteo)
 
 3) Analisi Attacchi
 	a) Studio attacco al variare del valore fisso impostato dall'attacco, analizzare effetto attacco (scontro, non inseguemento, ininfluenza)
