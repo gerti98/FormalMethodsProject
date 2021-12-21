@@ -14,7 +14,13 @@ from tabulate import tabulate
 #
 # 3) Runnare lo script
 
-rootdir = "/home/student/into-cps-projects/leader_and_follower/FormalMethodsProject/Multi-models/VanillaCase/co-sim"
+rootdir = "/home/student/into-cps-projects/leader_and_follower/FormalMethodsProject/DSEs/dse-new-(53)/2021_12_21_16.54.43"
+
+# In DSE the file is called config.mm.json, in multimodels is called mm.json
+config_mm_filename = "config.mm.json"
+# In DSE the file csv file with all values registered in the simulation is called results.csv, otherwise is outputs.csv
+result_csv_filename = "results.csv"
+
 
 log_directories = []
 for file in os.listdir(rootdir):
@@ -26,6 +32,7 @@ for file in os.listdir(rootdir):
 data_to_output = []
 
 for log_directory in log_directories:
+    print(log_directory)
     # Metadata to save from mm.json
     following_x0 = 0
     
@@ -37,11 +44,11 @@ for log_directory in log_directories:
     min_distance = 5000
     
     try:
-        with open(log_directory + "/mm.json") as json_file:
+        with open(log_directory + "/" + config_mm_filename) as json_file:
             data = json.load(json_file)
-            following_x0 = data["parameters"]["{FollowingCar}.FollowingCarInstance.x0"]
+            following_x0 = data["parameters"]["{Attack}.AttackInstance.attack_value"]
             
-        with open(log_directory + "/outputs.csv", mode='r') as csv_file:
+        with open(log_directory + "/" + result_csv_filename, mode='r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
             line_count = 0
             
@@ -80,4 +87,6 @@ for log_directory in log_directories:
     except FileNotFoundError:
         continue
             
-print(tabulate(data_to_output, headers=["Following_x0", "Mean Distance", "Max_Distance", "Min_Distance", "Max_following_car_accel", "Min_following_car_accel"]))
+
+data_to_output.sort(key= lambda x: x[0])
+print(tabulate(data_to_output, headers=["Attack_x", "Mean Distance", "Max_Distance", "Min_Distance", "Max_following_car_accel", "Min_following_car_accel"]))
