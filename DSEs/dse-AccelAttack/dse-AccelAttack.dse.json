@@ -1,0 +1,48 @@
+{
+    "algorithm": {
+        "type": "exhaustive"
+    },
+    "objectiveConstraints": [],
+    "objectiveDefinitions": {
+        "externalScripts": {},
+        "internalFunctions": {
+            "Ego_x": {
+                "columnID": "{FollowingCar}.FollowingCarInstance.x",
+                "objectiveType": "max"
+            },
+            "Leading_x": {
+                "columnID": "{LeadingCar}.LeadingCarInstance.x",
+                "objectiveType": "max"
+            }
+        }
+    },
+    "parameterConstraints": [],
+    "parameters": {
+        "{MitmAttackFmu}.MitmAttackFmuInstance.attack_time": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40
+        ],
+        "{MitmAttackFmu}.MitmAttackFmuInstance.attack_value": [
+            -5,
+            -1,
+            0,
+            1,
+            5
+        ],
+        "{MitmAttackFmu}.MitmAttackFmuInstance.step_size": [0.01]
+    },
+    "ranking": {
+        "pareto": {
+            "Ego_x": "+",
+            "Leading_x": "+"
+        }
+    },
+    "scenarios": []
+}

@@ -14,7 +14,8 @@ from tabulate import tabulate
 #
 # 3) Runnare lo script
 
-rootdir = "/home/student/into-cps-projects/leader_and_follower/FormalMethodsProject/DSEs/dse-new-(16)/2021_12_21_18.01.05"
+rootdir = "/home/student/into-cps-projects/FormalMethodsProject/DSEs/dse-AccelAttack/2021_12_21_22.40.52"
+
 
 # In DSE the file is called config.mm.json, in multimodels is called mm.json
 config_mm_filename = "config.mm.json"

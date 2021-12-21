@@ -1,0 +1,47 @@
+{
+    "algorithm": {
+        "size": 0.01,
+        "type": "fixed-step"
+    },
+    "connections": {
+        "{FollowingAlgorithm}.FollowingAlgorithmInstance.accel": [
+            "{MitmAttackFmu}.MitmAttackFmuInstance.input"
+        ],
+        "{FollowingCar}.FollowingCarInstance.speed": [
+            "{FollowingAlgorithm}.FollowingAlgorithmInstance.ego_speed"
+        ],
+        "{FollowingCar}.FollowingCarInstance.x": [
+            "{FollowingAlgorithm}.FollowingAlgorithmInstance.ego_x"
+        ],
+        "{LeadingCar}.LeadingCarInstance.accel": [
+            "{FollowingAlgorithm}.FollowingAlgorithmInstance.accel_in"
+        ],
+        "{LeadingCar}.LeadingCarInstance.speed": [
+            "{FollowingAlgorithm}.FollowingAlgorithmInstance.lead_speed"
+        ],
+        "{LeadingCar}.LeadingCarInstance.x": [
+            "{FollowingAlgorithm}.FollowingAlgorithmInstance.lead_x"
+        ],
+        "{MitmAttackFmu}.MitmAttackFmuInstance.output": [
+            "{FollowingCar}.FollowingCarInstance.accel"
+        ]
+    },
+    "fmus": {
+        "{FollowingAlgorithm}": "file:////home/student/into-cps-projects/FormalMethodsProject/FMUs/follow.fmu",
+        "{FollowingCar}": "file:////home/student/into-cps-projects/FormalMethodsProject/FMUs/Simple_car.fmu",
+        "{LeadingCar}": "file:////home/student/into-cps-projects/FormalMethodsProject/FMUs/LeadCar.fmu",
+        "{MitmAttackFmu}": "file:////home/student/into-cps-projects/FormalMethodsProject/FMUs/Attack_fmu.fmu"
+    },
+    "parameters": {
+        "{FollowingAlgorithm}.FollowingAlgorithmInstance.c1": 0.5,
+        "{FollowingAlgorithm}.FollowingAlgorithmInstance.eps": 1,
+        "{FollowingAlgorithm}.FollowingAlgorithmInstance.omega_n": 0.2,
+        "{FollowingCar}.FollowingCarInstance.v0": 0,
+        "{FollowingCar}.FollowingCarInstance.x0": 0,
+        "{LeadingCar}.LeadingCarInstance.simple_car.v0": 0,
+        "{LeadingCar}.LeadingCarInstance.simple_car.x0": 50,
+        "{MitmAttackFmu}.MitmAttackFmuInstance.attack_time": 40,
+        "{MitmAttackFmu}.MitmAttackFmuInstance.attack_value": -1,
+        "{MitmAttackFmu}.MitmAttackFmuInstance.step_size": 0.01
+    }
+}
