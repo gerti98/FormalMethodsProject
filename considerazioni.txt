@@ -2,4 +2,9 @@
     a) Lo scontro avviene sempre: appena la leading car supera la posizione indicata dall'attacco la following cercerà di avvicinarsi fino ad andarle addosso.
 
 2) Attacco ad accelerazione
-    a) Accelerazione a 0 è un caso interessante, l'effetto dell'attacco è diverso in base all'istante dell'attacco (la velocità della following car rimarrà fissa all'ultimo suo valore prima dell'attacco)
+    a) Accelerazione a 0 è un caso interessante, l'effetto dell'attacco è diverso in base all'istante dell'attacco (la velocità della following car rimarrà fissa all'ultimo suo valore all'istante dell'inizio dell'attacco)
+    b) Accelerazione > 0 -> Incidente estremamente probabile
+    c) Accelerazione < 0 -> Incidente estremamente improbabile
+
+3) Analisi ritardo MITM 
+   a) No slide, differenze microscopiche, solo citazione

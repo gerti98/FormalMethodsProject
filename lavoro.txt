@@ -3,9 +3,9 @@
 	b) Studiare impatto 3 parametri Following Algorithm, trovare 3 parametri fissi da usare.
 	c) Creare script python per analizzare log, output: Minumum Distance, Maximum Distance, Mean Distance, Accelerazione Max e Min 
 
-2) Crea MultiModel Attacchi
+2) Crea MultiModel Attacchi V
 	a) altera x tra Ego e Following Algo (Olgerti)
-	b) altera accelerazione di Following Car (Matteo)
+	b) altera accelerazione di Following Car (Matteo) 
 
 3) Analisi Attacchi
 	a) Studio attacco al variare del valore fisso impostato dall'attacco, analizzare effetto attacco (scontro, non inseguemento, ininfluenza)
