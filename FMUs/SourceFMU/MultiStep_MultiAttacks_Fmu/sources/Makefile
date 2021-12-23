@@ -21,14 +21,14 @@ all:
 	cp -r misraC sources
 	cp -r fmi sources
 	mv Attack_fmu.so binaries/linux64/
-	zip -r Attack_fmu.fmu modelDescription.xml binaries/ resources/ sources/
+	zip -r MultiStep_MultiAttacks_Fmu.fmu modelDescription.xml binaries/ resources/ sources/
 	rm -rf sources
 	rm -rf binaries
 
 run:
-	./fmuCheck.linux64 -h 1E-01 Attack_fmu.fmu
+	./fmuCheck.linux64 -h 1E-01 MultiStep_MultiAttacks_Fmu.fmu
 run1:
-	./fmuCheck.linux64 -h 1E-02 Attack_fmu.fmu
+	./fmuCheck.linux64 -h 1E-02 MultiStep_MultiAttacks_Fmu.fmu
 
 clean:
 	rm -rf  Attack_fmu.o fmu.o skeleton.o
