@@ -13,5 +13,12 @@
 	b) Confronti grafici pre e post attacco: metti in luce il ritardo dovuto al MITM
 
 4) Modifica Implementazione Attacco
-	a) Modificare implementazione Attack_fmu con intervallo di attacco e/o ripetizioni attacco
+	a) Modificare implementazione Attack_fmu con intervallo di attacco e/o ripetizioni attacco V
+	b) Creare MultiModelAccelX e trova combinazioni con e senza attacco V
+	c) Creare MultiModelEgoX e trova combinazioni con e senza attacco 
 
+5) Rifare Simulazioni DSE e co-sim punto 3 con tempo a 100
+
+6) Documentazione in Latex/Word
+
+7) Modificare script per generare csv
