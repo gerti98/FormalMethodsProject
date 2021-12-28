@@ -1,5 +1,6 @@
 import csv
 import os
+import csv
 import json
 from tabulate import tabulate
 
@@ -14,8 +15,12 @@ from tabulate import tabulate
 #
 # 3) Runnare lo script
 
-rootdir = "/home/student/into-cps-projects/FormalMethodsProject/DSEs/dse-AccelAttack/2021_12_21_22.40.52"
 
+##########################################################################
+# Configuration 
+##########################################################################
+
+rootdir = "/home/student/into-cps-projects/leader_and_follower/FormalMethodsProject/DSEs/dse-XAttack/2021_12_28_12.36.40"
 
 # In DSE the file is called config.mm.json, in multimodels is called mm.json
 config_mm_filename = "config.mm.json"
@@ -23,6 +28,12 @@ config_mm_filename = "config.mm.json"
 result_csv_filename = "results.csv"
 
 
+export_in_csv = True
+csv_filename = "prova.csv"
+
+###########################################################################
+
+# Memorizza in una lista tutte le cartelle da processare partendo da rootdir
 log_directories = []
 for file in os.listdir(rootdir):
     d = os.path.join(rootdir, file)
@@ -34,6 +45,7 @@ data_to_output = []
 
 for log_directory in log_directories:
     print(log_directory)
+    
     # Metadata to save from mm.json
     following_x0 = 0
     
@@ -47,18 +59,17 @@ for log_directory in log_directories:
     try:
         with open(log_directory + "/" + config_mm_filename) as json_file:
             data = json.load(json_file)
-            # following_x0 = data["parameters"]["{Attack}.AttackInstance.attack_value"]
-            attack_value = data["parameters"]["{MitmAttackFmu}.MitmAttackFmuInstance.attack_value"]
-            attack_time = data["parameters"]["{MitmAttackFmu}.MitmAttackFmuInstance.attack_time"]
+            #Get metadata
+            following_x0 = data["parameters"]["{Attack}.AttackInstance.attack_value"]
+            # attack_value = data["parameters"]["{MitmAttackFmu}.MitmAttackFmuInstance.attack_value"]
+            # attack_time = data["parameters"]["{MitmAttackFmu}.MitmAttackFmuInstance.attack_time"]
             
         with open(log_directory + "/" + result_csv_filename, mode='r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
             line_count = 0
             
-            
             for row in csv_reader:
                 if line_count == 0:
-                    # print(f'Column names are {", ".join(row)}')
                     line_count += 1
                 else:
                     lead_x = float(row["{LeadingCar}.LeadingCarInstance.x"])
@@ -85,11 +96,21 @@ for log_directory in log_directories:
             print(f"Processed {line_count} lines")
             print(f"Max_follow_accel: {max_follow_accel}, Min_follow_Accel: {min_follow_accel}")
             print(f"Min_distance: {min_distance}, Max_distance: {max_distance}, Mean_distance: {mean_distance}")
-            data_to_output.append([attack_time, attack_value, mean_distance, max_distance, min_distance, max_follow_accel, min_follow_accel])
+            data_to_output.append([following_x0, mean_distance, max_distance, min_distance, max_follow_accel, min_follow_accel])
             
     except FileNotFoundError:
         continue
-            
+        
+
+
 
 data_to_output.sort(key= lambda x: x[0])
-print(tabulate(data_to_output, headers=["Attack_time", "Attack_value", "Mean Distance", "Max_Distance", "Min_Distance", "Max_following_car_accel", "Min_following_car_accel"]))
+headers = ["Attack_value", "Mean Distance", "Max_Distance", "Min_Distance", "Max_following_car_accel", "Min_following_car_accel"]
+
+print(tabulate(data_to_output, headers=headers))
+
+if export_in_csv:
+    with open(csv_filename, "w", newline="") as f:
+        data_to_output.insert(0, headers)
+        writer = csv.writer(f)
+        writer.writerows(data_to_output)
