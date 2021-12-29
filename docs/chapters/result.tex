@@ -1,7 +1,7 @@
 \section{Analisi dei Risultati}
 \subsection{VanillaCase}
 \subsubsection{Risultati Co-Simulazione}
-E' stata effettuata una simulazione nel caso base per accertarsi che il comportamento del sistema conduce alla convergenza delle due macchine.
+E' stata effettuata una simulazione nel caso base per accertarsi che il comportamento del sistema conduca alla convergenza delle due macchine.
 
 \begin{figure}[h]
 	\centering
@@ -9,7 +9,11 @@ E' stata effettuata una simulazione nel caso base per accertarsi che il comporta
 	\caption{Posizione x della LeadingCar (verde) e FollowingCar (blu)}
 \end{figure}
 
-La distanze media tra le due auto è pari a \textbf{18.49m}.
+La distanze media tra le due auto è pari a \textbf{18.49m}. Dopo un iniziale periodo di transizione di circa 20s il sistema raggiunge la convergenza attesa e i due veicoli proseguono il percorso ad una distanza approssimativa di 15m fino a fine simulazione.
+
+... immagine accel\_speed ...
+
+Dalla figura sopra riportata è inoltre osservabile come negli istanti iniziali la following car abbia una accelerazione positiva maggiore di quella della leading. Questo si riflette inoltre sulle relative velocità. Il motivo di questo comportamento è dovuto all'iniziale periodo di transizione in cui la following car recupera la distanza iniziale (molto maggiore di 15m) dalla leading car. 
 
 \subsection{Attacco all'accelerazione}
 \subparagraph{Attacco Semplice}
