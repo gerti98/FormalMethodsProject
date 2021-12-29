@@ -1,0 +1,9 @@
+\section{Scelte di Sviluppo}
+\subsection{Modifica FMU}
+Gli attacchi verrano implementati utilizzando la tecnica del \textit{Man-in-the-Middle}: verrà introdotta una FMU semplificata tra un punto di comunicazione di due FMU, questo consentirà di semplificare la modifica dell'implementazione dell'attacco in quanto non è necessario conoscere i dettagli implementativi delle FMU in gioco. Questo a patto di un maggior overhead del sistema per effettuare la comunicazione dei parametri tra le varie FMU.
+\subsection{Scelta dei parametri}
+
+\begin{itemize}
+	\item \textbf{Step-size}: \textbf{0.01s}. E' un buon tradeoff tra un sensoring più preciso ed una durata di simulazione accetabile.
+	\item \textbf{Tempo di Simulazione}: \textbf{100s}
+\end{itemize}

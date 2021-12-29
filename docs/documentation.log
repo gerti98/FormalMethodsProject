@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  29 DEC 2021 14:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  29 DEC 2021 17:26
 entering extended mode
 **./documentation.tex
 (documentation.tex
@@ -141,24 +141,31 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \xmathstrut@box=\box49
 \xmathstrut@dim=\dimen165
 )
+(C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip56
+\multirow@cntb=\count268
+\multirow@dima=\skip57
+\bigstrutjot=\dimen166
+)
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count268
+\lst@mode=\count269
 \lst@gtempboxa=\box50
 \lst@token=\toks22
-\lst@length=\count269
-\lst@currlwidth=\dimen166
-\lst@column=\count270
-\lst@pos=\count271
-\lst@lostspace=\dimen167
-\lst@width=\dimen168
-\lst@newlines=\count272
-\lst@lineno=\count273
-\lst@maxwidth=\dimen169
+\lst@length=\count270
+\lst@currlwidth=\dimen167
+\lst@column=\count271
+\lst@pos=\count272
+\lst@lostspace=\dimen168
+\lst@width=\dimen169
+\lst@newlines=\count273
+\lst@lineno=\count274
+\lst@maxwidth=\dimen170
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count274
-\lst@skipnumbers=\count275
+\c@lstnumber=\count275
+\lst@skipnumbers=\count276
 \lst@framebox=\box51
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
@@ -194,8 +201,8 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen170
-\ESO@tempdimb=\dimen171
+\ESO@tempdima=\dimen171
+\ESO@tempdimb=\dimen172
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
@@ -212,34 +219,34 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 )
-\Gin@req@height=\dimen172
-\Gin@req@width=\dimen173
+\Gin@req@height=\dimen173
+\Gin@req@width=\dimen174
 )
-\AM@pagewidth=\dimen174
-\AM@pageheight=\dimen175
+\AM@pagewidth=\dimen175
+\AM@pageheight=\dimen176
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/pdfpages\pppdftex.def
 File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 )
 \AM@pagebox=\box52
 \AM@global@opts=\toks23
-\AM@pagecnt=\count276
+\AM@pagecnt=\count277
 \AM@toc@title=\toks24
-\c@AM@survey=\count277
+\c@AM@survey=\count278
 \AM@templatesizebox=\box53
 ) (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2020/10/06 3.50 The Babel package
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
 File: babel.def 2020/10/06 3.50 Babel common definitions
-\babel@savecnt=\count278
-\U@D=\dimen176
+\babel@savecnt=\count279
+\U@D=\dimen177
 \l@babelnohyphens=\language79
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count279
+\bbl@dirlevel=\count280
 
 *************************************
 * Local config file bblopts.cfg used
@@ -263,22 +270,22 @@ Package: caption 2020/09/12 v3.5b Customizing captions (AR)
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/09/17 v2.1b caption3 kernel (AR)
-\captionmargin=\dimen177
-\captionmargin@=\dimen178
-\captionwidth=\dimen179
-\caption@tempdima=\dimen180
-\caption@indent=\dimen181
-\caption@parindent=\dimen182
-\caption@hangindent=\dimen183
+\captionmargin=\dimen178
+\captionmargin@=\dimen179
+\captionwidth=\dimen180
+\caption@tempdima=\dimen181
+\caption@indent=\dimen182
+\caption@parindent=\dimen183
+\caption@hangindent=\dimen184
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count280
-\c@continuedfloat=\count281
+\c@caption@flags=\count281
+\c@continuedfloat=\count282
 Package caption Info: listings package is loaded.
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count282
+\c@float@type=\count283
 \float@exts=\toks25
 \float@box=\box54
 \@float@everytoks=\toks26
@@ -287,47 +294,48 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (ulem.sty
 \UL@box=\box56
 \UL@hyphenbox=\box57
-\UL@skip=\skip56
+\UL@skip=\skip58
 \UL@hook=\toks27
-\UL@height=\dimen184
-\UL@pe=\count283
-\UL@pixel=\dimen185
+\UL@height=\dimen185
+\UL@pe=\count284
+\UL@pixel=\dimen186
 \ULC@box=\box58
 Package: ulem 2019/11/18
-\ULdepth=\dimen186
+\ULdepth=\dimen187
 ) (titlesec.sty
 Package: titlesec 2002/04/07 v2.5 Sectioning titles
 \ttl@box=\box59
-\beforetitleunit=\skip57
-\aftertitleunit=\skip58
-\ttl@plus=\dimen187
-\ttl@minus=\dimen188
-\titlewidth=\dimen189
-\titlewidthlast=\dimen190
-\titlewidthfirst=\dimen191
+\beforetitleunit=\skip59
+\aftertitleunit=\skip60
+\ttl@plus=\dimen188
+\ttl@minus=\dimen189
+\titlewidth=\dimen190
+\titlewidthlast=\dimen191
+\titlewidthfirst=\dimen192
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count284
+\l__kernel_color_stack_int=\count285
 \l__pdf_internal_box=\box60
-) (documentation.aux (chapters/intro.aux))
+) (documentation.aux (chapters/intro.aux) (chapters/design.aux)
+(chapters/implementation.aux) (chapters/result.aux) (chapters/conclusion.aux))
 \openout1 = `documentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -363,21 +371,21 @@ LaTeX Font Info:    ... okay on input line 55.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count285
+\c@lstlisting=\count286
 
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count286
-\scratchdimen=\dimen192
+\scratchcounter=\count287
+\scratchdimen=\dimen193
 \scratchbox=\box61
-\nofMPsegments=\count287
-\nofMParguments=\count288
+\nofMPsegments=\count288
+\nofMParguments=\count289
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count289
-\MPscratchDim=\dimen193
-\MPnumerator=\count290
-\makeMPintoPDFobject=\count291
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen194
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
 \everyMPtoPDFconversion=\toks29
 )
 (C:\Users\gxhan\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -406,7 +414,7 @@ d
 File: img/marchio_unipi_pant541-eps-converted-to.pdf Graphic file (type pdf)
 <use img/marchio_unipi_pant541-eps-converted-to.pdf>
 Package pdftex.def Info: img/marchio_unipi_pant541-eps-converted-to.pdf  used o
-n input line 62.
+n input line 66.
 (pdftex.def)             Requested size: 362.37569pt x 193.1007pt.
 [1
 
@@ -421,25 +429,111 @@ nipi_pant541-eps-converted-to.pdf>] (documentation.toc)
 
 (chapters/intro.tex) [2
 
-] (documentation.aux (chapters/intro.aux)) ) 
+]
+\openout2 = `chapters/design.aux'.
+
+ (chapters/design.tex) [3
+
+
+
+]
+\openout2 = `chapters/implementation.aux'.
+
+ (chapters/implementation.tex
+
+pdfTeX warning: pdflatex.exe (file ./img/VanillaSchema.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+<img/VanillaSchema.pdf, id=27, 348.34138pt x 103.3461pt>
+File: img/VanillaSchema.pdf Graphic file (type pdf)
+<use img/VanillaSchema.pdf>
+Package pdftex.def Info: img/VanillaSchema.pdf  used on input line 5.
+(pdftex.def)             Requested size: 348.34053pt x 103.34584pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./img/AccelAttackSchema.pdf): PDF inclusion:
+ found PDF version <1.7>, but at most version <1.5> allowed
+<img/AccelAttackSchema.pdf, id=28, 492.88138pt x 103.3461pt>
+File: img/AccelAttackSchema.pdf Graphic file (type pdf)
+<use img/AccelAttackSchema.pdf>
+Package pdftex.def Info: img/AccelAttackSchema.pdf  used on input line 12.
+(pdftex.def)             Requested size: 492.88017pt x 103.34584pt.
+
+Overfull \hbox (39.91228pt too wide) in paragraph at lines 12--13
+ [][] 
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file ./img/XAttackSchema.pdf): PDF inclusion: fou
+nd PDF version <1.7>, but at most version <1.5> allowed
+<img/XAttackSchema.pdf, id=29, 492.88138pt x 153.6942pt>
+File: img/XAttackSchema.pdf Graphic file (type pdf)
+<use img/XAttackSchema.pdf>
+Package pdftex.def Info: img/XAttackSchema.pdf  used on input line 18.
+(pdftex.def)             Requested size: 492.88017pt x 153.6938pt.
+
+Overfull \hbox (39.91228pt too wide) in paragraph at lines 18--19
+ [][] 
+ []
+
+[4
+
+
+
+ <./img/VanillaSchema.pdf> <./img/AccelAttackSchema.pdf> <./img/XAttackSchema.p
+df>]) [5]
+\openout2 = `chapters/result.aux'.
+
+ (chapters/result.tex
+<img/x.png, id=81, 1049.9225pt x 566.115pt>
+File: img/x.png Graphic file (type png)
+<use img/x.png>
+Package pdftex.def Info: img/x.png  used on input line 8.
+(pdftex.def)             Requested size: 452.9679pt x 244.2367pt.
+ [6
+
+
+
+ <./img/x.png>]
+<img/AttackXSimulation.png, id=86, 1124.2pt x 843.15pt>
+File: img/AttackXSimulation.png Graphic file (type png)
+<use img/AttackXSimulation.png>
+Package pdftex.def Info: img/AttackXSimulation.png  used on input line 32.
+(pdftex.def)             Requested size: 452.9679pt x 339.72418pt.
+ [7 <./img/AttackXSimulation.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 74--74
+[]\OT1/cmr/m/n/12 Distanza Min-
+ []
+
+) [8]
+\openout2 = `chapters/conclusion.aux'.
+
+ (chapters/conclusion.tex) [9
+
+
+
+] (documentation.aux (chapters/intro.aux)
+(chapters/design.aux) (chapters/implementation.aux) (chapters/result.aux)
+(chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 7761 strings out of 480236
- 119321 string characters out of 2880557
- 429300 words of memory out of 3000000
- 24222 multiletter control sequences out of 15000+200000
- 541127 words of font info for 50 fonts, out of 3000000 for 9000
+ 7906 strings out of 480236
+ 122714 string characters out of 2880557
+ 443632 words of memory out of 3000000
+ 24328 multiletter control sequences out of 15000+200000
+ 541464 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,5n,77p,259b,266s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/gxhan/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/gxhan
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Use
-rs/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb
-><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mti12.pfb>
-Output written on documentation.pdf (3 pages, 112310 bytes).
+ 72i,9n,77p,793b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/gxhan/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gxhan/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users
+/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+
+Output written on documentation.pdf (10 pages, 306661 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
+ 117 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

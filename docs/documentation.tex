@@ -4,7 +4,7 @@
 \usepackage[a4paper, margin=1in]{geometry}
 
 \usepackage{mathtools}
-
+\usepackage{multirow}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{mathtools}
@@ -50,6 +50,10 @@
 
 \includeonly{
 	chapters/intro,
+	chapters/design,
+	chapters/implementation,
+	chapters/result,
+	chapters/conclusion
 }
 
 \begin{document}
@@ -74,8 +78,6 @@
 				\textit{TEAM MEMBERS}:\\
 				Matteo Biondi\\
 				Olgerti Xhanej\\
-				
-				
 			\end{flushright}
 			\vfill
 			Academic Year: 2020/2021\\        
@@ -84,5 +86,8 @@
 	\tableofcontents
 	
 	\include{chapters/intro}
-	
+	\include{chapters/design}	
+	\include{chapters/implementation}
+	\include{chapters/result}
+	\include{chapters/conclusion}
 \end{document}          

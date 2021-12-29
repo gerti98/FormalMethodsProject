@@ -1,0 +1,84 @@
+\section{Analisi dei Risultati}
+\subsection{VanillaCase}
+\subsubsection{Risultati Co-Simulazione}
+E' stata effettuata una simulazione nel caso base per accertarsi che il comportamento del sistema conduce alla convergenza delle due macchine.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{img/x.png}
+	\caption{Posizione x della LeadingCar (verde) e FollowingCar (blu)}
+\end{figure}
+
+La distanze media tra le due auto è pari a \textbf{18.49m}.
+
+\subsection{Attacco all'accelerazione}
+\subparagraph{Attacco Semplice}
+\subparagraph{Attacco Multiplo}
+\subsubsection{Risultati DSE}
+\subsubsection{Risultati Co-Simulazione}
+\subsection{Attacco alla X}
+\subparagraph{Attacco Semplice}
+\subsubsection{Risultati Co-Simulazione}
+Per cercare di dare un'interpretazione ai risultati del successivo studio verrà prima analizzato un caso d'esempio con i seguenti parametri:
+\begin{itemize}
+	\item \textbf{attack\_value}: 200
+	\item \textbf{attack\_time}: 20s
+\end{itemize}
+
+Si ottiene il seguente plot:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/AttackXSimulation.png}
+	\caption{Posizione x della LeadingCar (verde) e FollowingCar (blu)}
+\end{figure}
+Dal seguente risultato è possibile evincere tre differenti zone di comportamento della following car: nel \textbf{primo caso} nel quale l'attacco non viene ancora effettuato, la following car tende ad avvicinarsi alla leading car alla distanza configurata; nel \textbf{secondo caso}, dal un tempo di 20s ad uno di circa 40s, l'attacco inizierà ma la leading car non avrà superato ancora l'\textbf{attack\_value} impostato, che rappresenta la (alterata) posizione della following car: quest'ultima penserà di trovarsi davanti e decelererà; il \textbf{terzo caso}, dopo 40s, nel quale la leading car ha superato l'attack value e perciò la following car inizierà a riavvicinarsi fino all'impatto tra le due auto.
+Per come è configurata la leading car, ovvero che tenderà sempre ad andare "in avanti" con qualche oscillazione nella velocità, è facile intuire che \textbf{un incidente con questo tipo di attacco per un tempo sufficiente avrà sempre luogo}, in quanto esisterà sempre un tempo nella quale la leading car supererà l'attack\_value, per quanto elevato possa essere quest'ultimo.  
+\subsubsection{Risultati DSE}
+E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a variare l'\textbf{attack\_value} e l'\textbf{attack\_time} con i seguenti parametri:
+\begin{itemize}
+	\item \textbf{Attack\_value}: [0 .. 200] con step a 1
+	\item \textbf{Simulation\_time}: [50s, 100s]
+\end{itemize}
+ 
+ I risultati ottenuti possono essere riassunti nella seguente tabella
+\begin{center}
+	\begin{tabular}{ |p{6cm}|p{3cm}|p{4cm}|  }
+		\hline
+		Tempo di Simulazione& Attack Value & Risultato \\
+		\hline
+		\multirow{2}{4em}{50s} & [0, 149] & INCIDENTE \\
+		& [150, 199] & NO INCIDENTE \\
+		\hline
+		\multirow{2}{4em}{100s} & [0, 199] & INCIDENTE \\
+		& - & NO INCIDENTE \\
+		\hline
+	\end{tabular}
+\end{center}
+Da come si può notare il tempo è una variabile importante per questo tipo di attacco, con un tempo sufficientemente alto l'attacco ha sempre luogo come detto in precedenza.
+
+\subparagraph{Attacco Multiplo}
+Sono stati individuati quattro diverse configurazioni che portano luogo a quattro classi di risultati diversi:
+\begin{itemize}
+	\item \textbf{Attack\_occurencies}: 3
+	\item \textbf{Attack\_duration}: 2s
+	\item \textbf{Attack\_time}: [30s, 50s, 70s]
+	\item \textbf{Attack\_value}: 200
+	\item \textbf{Attack\_distance}: 5s
+	\item \textbf{Step\_size}: 0.01s
+\end{itemize}
+L'attacco pertanto avrà un pattern simile a livello temporale, la variabile è l'inizio dell'attacco stesso. I risultati degli esperimenti sono riassunti nella seguente tabella
+\begin{center}
+	\begin{tabular}{ |p{6cm}|p{3cm}| p{4cm}|  }
+		\hline
+		Attack Time & Distanza Minima & Risultato \\
+		\hline
+		30s & 14.9368 & NO INCIDENTE \\
+		\hline
+		50s & 0.639284 & NO INCIDENTE \\
+		\hline
+		70s & -20.38 & INCIDENTE \\
+		\hline
+	\end{tabular}
+\end{center}
+Una semplice interpretazione di questi risultati si basa sul fatto che il following algorithm produce un'accelerazione maggiore in caso la distanza tra le due auto sia maggiore: considerato che la distanza della following car vista dal following è fissa (per via dell'attacco in corso), nel caso il tempo di inizio sia maggiore, maggiore sarà la posizione della leading car e perciò maggiore sarà l'accelerazione in input che porterà ad una collisione nel caso di Attack time pari a 70s. 
+	
