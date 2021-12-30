@@ -25,7 +25,12 @@ Come primo approccio all'analisi al sistema è stato scelto di fare uso del DSE,
 \end{itemize}
 I risultati ottenuti sono stati successivamente eleborati così da estrapolare il seguente grafico che mostra la percentuale degli incidenti per ogni \textbf{attack\_value} al variare di \textbf{attack\_time}. Per individuare le condizioni di attacco è stato necessario estrapolare la distanza minima delle due macchine sull'intero tempo di simulazione.
 
-...Immagine di excel...
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/PlotPercentageIncidenteAttackAccel.png}
+	\caption{Rappresentazione delle percentuali di incidenti nei casi testati con studio DSE}
+\end{figure}
+
 
 Come si può notare, è possibile individuare tre casi ben distinti:
 \begin{itemize}
@@ -151,5 +156,4 @@ L'attacco pertanto avrà un pattern simile a livello temporale, la variabile è 
 		\hline
 	\end{tabular}
 \end{center}
-Una semplice interpretazione di questi risultati si basa sul fatto che il following algorithm produce un'accelerazione maggiore in caso la distanza tra le due auto sia maggiore: considerato che la distanza della following car vista dal following è fissa (per via dell'attacco in corso), nel caso il tempo di inizio sia maggiore, maggiore sarà la posizione della leading car e perciò maggiore sarà l'accelerazione in input che porterà ad una collisione nel caso di Attack time pari a 70s. 
-	
+Una semplice interpretazione di questi risultati si basa sul fatto che il following algorithm produce un'accelerazione maggiore in caso la distanza tra le due auto sia maggiore: considerato che la distanza della following car vista dal following è fissa (per via dell'attacco in corso), nel caso il tempo di inizio sia maggiore, maggiore sarà la posizione della leading car e perciò maggiore sarà l'accelerazione in input che porterà ad una collisione nel caso di Attack time pari a 70s.
