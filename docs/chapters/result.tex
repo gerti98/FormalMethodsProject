@@ -138,7 +138,7 @@ Dalle osservazioni fatte si può evincere quanto segue:
 In questa sezione vengono riportati due diverse condizioni di attacco in cui quest'ultimo ha una durata di un certo numero di step e si ripete più volte nel tempo. L'obiettivo è quello di individuare una condizione in cui,nonostante gli attacchi ripetuti, il sistema risulta tollerante e uno invece in cui l'attacco porta a un incidente fra i due veicoli
 \subparagraph{Risultati Co-Simulazione}
 \subparagraph{Attacco senza incidente}
-
+L'obiettivo della presente co-simulazione è quello di andare ad individuare un attacco in cui la presenza di più occorrenze risulta non chiave nel verificarsi di un incidente fra i due veicoli. In particolare viene posto come obiettivo quello di studiare il comportamento della following car al termine dell'attacco multiplo. Di seguito sono riportate le configurazioni dell'attacco in esame.
 \begin{itemize}
 	\item \textbf{Attack\_occurencies}: 2
 	\item \textbf{Attack\_duration}: 5s
@@ -147,10 +147,28 @@ In questa sezione vengono riportati due diverse condizioni di attacco in cui que
 	\item \textbf{Attack\_distance}: 10s
 	\item \textbf{Step\_size}: 0.01s
 \end{itemize}
+Vengono ora riportati i risultati della co-simulazione nelle immagini seguenti.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotXNoCrash.png}
+	\caption{Grafico di posizione dei due veicoli nel caso di attacco multiplo. Notare il non verificarsi di un incidente e il ritorno a convergenza.}
+\end{figure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotAccelNoCrash.png}
+	\caption{Grafico delle accelerazioni nel caso di attacco multiplo.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotSpeedNoCrash.png}
+	\caption{Grafico di velocità dei due veicoli nel caso di attacco multiplo.}
+\end{figure}
 
+Osservando i grafici sopra descritti è possibile osservare come, nonostante il verificarsi di molteplici attacchi, la following car non crei alcun incidente. Inoltre è doveroso soffermare l'attenzione sulla tolleranza del sistema a questo tipo di attacco, al termine del quale la following car si avvicina nuovamente portandosi alla distanza di 15m dalla leading car.
 
 \subparagraph{Attacco con incidente}
+L'obiettivo della presente co-simulazione è quello di andare ad individuare un attacco in cui la presenza di più occorrenze risulta chiave nel verificarsi di un incidente fra i due veicoli. Di seguito sono riportate le configurazioni dell'attacco in esame.
 \begin{itemize}
 \item \textbf{Attack\_occurencies}: 2
 \item \textbf{Attack\_duration}: 2s
@@ -160,23 +178,25 @@ In questa sezione vengono riportati due diverse condizioni di attacco in cui que
 \item \textbf{Step\_size}: 0.01s
 \end{itemize}
 
+Vengono ora riportati i risultati della co-simulazione nelle immagini seguenti.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotXCrash.png}
-	\caption{}
+	\caption{Grafico di posizione dei due veicoli nel caso di attacco multiplo. Notare il verificarsi di un incidente.}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotAccelCrash.png}
-	\caption{}
+	\caption{Grafico delle accelerazioni nel caso di attacco multiplo.}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotSpeedCrash.png}
-	\caption{}
+	\caption{Grafico di velocità dei due veicoli nel caso di attacco multiplo.}
 \end{figure}
 
+Osservando i grafici sopra descritti è possibile osservare come il secondo evento di attacco risulta fondamentale nel verificarsi dell'incidente. Senza questo secondo evento infatti la following car si sarebbe nuovamente distanziata dalla leading car così da raggiungere la distanza richiesta di 15m.
 
 \subsection{Attacco alla X}
 \subparagraph{Attacco Semplice}
