@@ -34,7 +34,7 @@ I risultati ottenuti sono stati successivamente eleborati così da estrapolare i
 
 Come si può notare, è possibile individuare tre casi ben distinti:
 \begin{itemize}
-	\item \textbf{Attacchi con accelerazione negativa}: La following car è portata a rallentare con andamento lineare fino a cambiare la propria direzione di marcia. In questo caso le macchine tendono ad allontanarsi e l'incidente non avrà luogo. Inoltre è doveroso sottolineare che la following car perde completamente la capacità di inseguimento della leading car.
+	\item \textbf{Attacchi con accelerazione negativa}: La following car è portata a rallentare con andamento lineare fino a cambiare la propria direzione di marcia. In questo caso le macchine tendono ad allontanarsi e l'incidente non avrà luogo. Inoltre è doveroso sottolineare che la following car perde completamente la capacità di inseguimento della leading car. Non ci sarà quindi convergenza fra following e leading car.
 	\item \textbf{Attacchi con accelerazione pari a 0}: dal grafico emerge una chiara necessità di uno studio più approfondito di questa casistica in quanto non si delinea alcun risultato conclusivo. Essendo che l'accelerazione resta costante e pari a 0, la velocità della following car rimane costante al valore nel momento \textbf{Attack\_time}. La presenza o meno di incidenti dipende quindi proprio dal valore della velocità e quindi da \textbf{Attack\_time}
 	\item \textbf{Attacchi con accelerazione positiva}: La following car è portata ad aumentare la propria velocità con andamento lineare . In questo caso le macchine tendono ad avvicinarsi e l'incidente avrà luogo.
 \end{itemize}
@@ -45,24 +45,7 @@ Esistono tuttavia condizioni speciali che è doveroso sottolineare:
 \end{itemize}
 \subparagraph{Risultati Co-Simulazione}
 Con l'obiettivo di rafforzare quanto appena descritto  e individuato tramite l'analisi dei risultati del DSE, vengono qui riportati tre casi fondamentali.
-\subparagraph{Attacchi con accelerazione negativa pari a -1} Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
-L'attacco è stato eseguito con:
-\begin{itemize}
-	\item \textbf{attack\_value}: -1
-	\item \textbf{attack\_time}: 20s
-\end{itemize}
-........immagini......
-
-Dalle osservazioni fatte si può evincere quanto segue:
-**************************Da rivedere******************
-\begin{itemize}
-	\item La following car e la leading car fanno un incidente. Essendo che l'accelerazione è costante e tale che |Attack\_value| > 0 , allora la velocità tende ad aumentare sempre più. L'allontanamento da leading avverrà in modo esponenziale
-	\item La velocità di following car è in crescita lineare
-	\item L'accellerazione che following algorithm pensa di dire a following car è sempre minore con andamento quasi esponenziale. Avrà sicuramente delle micro-oscillazioni ma sono impercettibili a causa dell'elevata distanza dalla leading car. Quindi una decellerazione/accellerazione della leading car ha un effetto trascurabile su following Algorithm
-\end{itemize}
-
-\subparagraph{Attacchi con accelerazione positiva pari a 1}
-Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
+\subparagraph{Attacchi con accelerazione positiva pari a 1} Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
 L'attacco è stato eseguito con:
 \begin{itemize}
 	\item \textbf{attack\_value}: 1
@@ -73,9 +56,25 @@ L'attacco è stato eseguito con:
 Dalle osservazioni fatte si può evincere quanto segue:
 **************************Da rivedere******************
 \begin{itemize}
-	\item la following car non fa un incidente e continua la sua corsa in senso opposto rispetto alla leading car. Essendo che l'accelerazione è costante e tale che |Attack\_value| > 0 allora la velocità tende ad aumentare sempre più. L'allontanamento da leading avverrà in modo esponenziale
-	\item la velocità di following car decresce sempre più fino ad annullarsi e poi a cambiare segno (facendo muovere la macchina in retromarcia)
-	\item l'accellerazione che following algorithm pensa di dire a following  car è sempre maggiore e con un andamento quasi esponenziale. Avrà sicuramente delle microoscillazioni ma sono impercettibili a causa dell'elevata distanza dalla leading car. Quindi una decellerazione/accellerazione della leading car ha un effetto trascurabile su following Algorithm. Non ci sarà convergenza
+	\item La following car e la leading car fanno un incidente. Essendo che l'accelerazione è costante e tale che |Attack\_value| > 0 , allora la velocità tende ad aumentare linearmente. L'allontanamento da leading avverrà in modo quadratico nel tempo
+	\item L'accellerazione che following algorithm pensa di dire a following car è sempre minore con andamento non lineare. Avrà sicuramente delle micro-oscillazioni ma sono quasi impercettibili a causa dell'elevata distanza dalla leading car. Quindi una decellerazione/accellerazione della leading car ha un effetto quasi trascurabile su following Algorithm
+\end{itemize}
+
+\subparagraph{Attacchi con accelerazione negativa pari a -1}
+Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
+L'attacco è stato eseguito con:
+\begin{itemize}
+	\item \textbf{attack\_value}: -1
+	\item \textbf{attack\_time}: 20s
+\end{itemize}
+........immagini......
+
+Dalle osservazioni fatte si può evincere quanto segue:
+**************************Da rivedere******************
+\begin{itemize}
+	\item La following car non fa un incidente e continua la sua corsa in senso opposto rispetto alla leading car. Ogni considerazione fatta per il caso precedente rispetto a accelerazione e velocità sono ancora valide ma speculari.
+	\item La velocità di following car decresce linearmente fino ad annullarsi e poi a cambiare segno (facendo muovere la macchina in retromarcia)
+	\item Ogni considerazione fatta nel caso precedente rispetto all'accelerazione che following algorithm pensa di dire a following  car è tutt'ora valida e speculare al caso precedente.
 \end{itemize}
 
 \subparagraph{Attacchi con accelerazione pari a 0}
@@ -87,9 +86,9 @@ Dalle osservazioni fatte si può evincere quanto segue:
 In questa sezione vengono riportati due diverse condizioni di attacco in cui quest'ultimo ha una durata di un certo numero di step e si ripete più volte nel tempo. L'obiettivo è quello di individuare una condizione in cui,nonostante gli attacchi ripetuti, il sistema risulta tollerante e uno invece in cui l'attacco porta a un incidente fra i due veicoli
 \subparagraph{Risultati Co-Simulazione}
 \subparagraph{Attacco senza incidente}
-..............immagini.............
+..............immagini + dati + spiegazione .............
 \subparagraph{Attacco con incidente}
-..............immagini.............
+..............immagini + dati + spiegazione .............
 
 
 \subsection{Attacco alla X}
