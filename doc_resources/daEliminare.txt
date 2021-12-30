@@ -1,0 +1,49 @@
+**********************************************************************************************************
+per accel = 1
+1)La following car e la leading car fanno un incidente. Essendo che l'accelerazione è costante e tale che |Attack_value| > 0 , allora la velocità tende ad aumentare sempre più. L'allontanamento da leading avverrà in modo esponenziale
+2)La velocità di following car è in crescita lineare
+3)L'accellerazione che following alg pensa di dire a following car è sempre minore con andamento quasi esponenziale. Avrà sicuramente delle micro-oscillazioni ma sono impercettibili a causa dell'elevata distanza dalla leading car. Quindi una decellerazione/accellerazione della leading ha un effetto trascurabile su folowing Algorithm
+
+grafici: attacco + following alg ????? + Velocità???? + Posizione
+
+**********************************************************************************************************
+accel = -1
+1)la following car non fa un incidente e continua la sua corsa in senso opposto rispetto alla leading car. Essendo che l'accelerazione è costante e tale che |Attack\_value| > 0 allora la velocità tende ad aumentare sempre più. L'allontanamento da leading avverrà in modo esponenziale
+2)la velocità di following car decresce sempre più fino ad annullarsi e poi a cambiare segno (facendo muovere la macchina in retromarcia)
+3)l'accellerazione che following algorithm pensa di dire a following  car è sempre maggiore e con un andamento quasi esponenziale. Avrà sicuramente delle microoscillazioni ma sono impercettibili a causa dell'elevata distanza dalla leading car. Quindi una decellerazione/accellerazione della leading car ha un effetto trascurabile su following Algorithm. Non ci sarà convergenza
+
+grafici: attacco + following alg ????? + Velocità???? + Posizione
+
+**********************************************************************************************************
+accel = 0
+
+PRIMA DI CONVERGENZA:
+	T = 10	=> stuck at max speed 	=>	 la following car fa un incidente. Accel di alg sinusoidale decrescente => posizione leading car non trascurabile 
+	T = 15	=> stuck at mean speed 	=> incidenti multipli ma la macchina non si allontana troppo dalla leading.Accel decrescente con andamento sinusoidale
+	T =20 	=> stuck at min speed 	=> followingcar non fa un incidente e continua la sua corsa distanziandosi sempre più dalla leading car. l'accellerazione che following alg pensa di dire a followingcar ha un andamento sinusoidale e crescente
+	
+DOPO LA CONVERGENZA:
+	T = 40 	=> stuck at min speed 	=>	Accel crescente con andamento sinusoidale. no incidente ma allontanamento con movimento di following in senso opposto.
+	T = 45 	=> stuck at about mean speed 	=> No perdita di inseguimento. Susseguirsi di avvicinamenti e allontanamenti. Se progredita nel tempo può portare ad un lento avvicinamento e a ripetuti crash. Accel andamento sinusoidale che presenta un valore massimo sempre minore e un valore minimo sempre maggiore. Andamento sinusoidale. (no "diagonale"). all'infinito la following sorpassa la leading definitivamente e si allontana perdendo l'inseguimento
+	T = 50 	=> stuck at max speed 	=> la followin fa incidente. Accel di alg sinusoidale decrescente
+	
+	
+**********************************************************************************************************
+Attacchi multipli:
+	-Multi step e ripetuto => accellerazione stuck at x (es x = 1)	=> incidente
+	-Multi step e ripetuto => accellerazione stuck at x (es x = -1) => no incidente
+	
+	Parametri:
+	tempo di attacco: 30 
+	
+	no crash:
+	-durata: 5
+	-distanza: 10
+	-numero ripetizioni: 2
+	per non crash: stuck at -5  ==> rallentamento di convergenza
+	
+	crash: Mi voglio avvicinare al crash a più riprese per mettere in luce la particolarità di multi step e ripetuto
+	-durata: 2
+	-distanza: 5
+	-numero ripetizioni: 2
+	per crash: stuck at +2
