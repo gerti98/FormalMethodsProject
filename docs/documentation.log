@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.12.29)  30 DEC 2021 17:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.12.29)  30 DEC 2021 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -467,6 +467,8 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -494,8 +496,6 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 
@@ -615,6 +615,10 @@ File: img/accel_speed.png Graphic file (type png)
 <use img/accel_speed.png>
 Package pdftex.def Info: img/accel_speed.png used on input line 16.
 (pdftex.def)             Requested size: 452.9679pt x 244.00346pt.
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
  [10
 
 
@@ -681,6 +685,8 @@ Missing character: There is no ¹ in font cmr12!
 
 [12 <./img/PlotPercentageIncidenteAttackAccel.png>]
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
 <img/AttackAccel1X.png, id=120, 1053.9375pt x 570.13pt>
@@ -696,6 +702,10 @@ File: img/AttackAccel1Speed.png Graphic file (type png)
 <use img/AttackAccel1Speed.png>
 Package pdftex.def Info: img/AttackAccel1Speed.png used on input line 68.
 (pdftex.def)             Requested size: 452.9679pt x 243.77023pt.
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
  [13 <./img/AttackAccel1X.png>]
 <img/AttackAccel1Accel.png, id=125, 1053.9375pt x 567.11874pt>
 File: img/AttackAccel1Accel.png Graphic file (type png)
@@ -724,6 +734,8 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
 <img/AttackAccel-1XZoomed.png, id=130, 1051.93pt x 568.1225pt>
@@ -743,6 +755,8 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
 
 Underfull \hbox (badness 1077) in paragraph at lines 136--136
 \OT1/cmr/m/n/12 Nes-sun in-ci-dente ma al-lon-tana-mento con
@@ -758,58 +772,66 @@ Underfull \hbox (badness 1394) in paragraph at lines 136--136
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/AttackAccel0T45X.png, id=135, 1052.93375pt x 565.11125pt>
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+<img/AttackAccel0T40X.png, id=135, 1051.93pt x 568.1225pt>
+File: img/AttackAccel0T40X.png Graphic file (type png)
+
+<use img/AttackAccel0T40X.png>
+Package pdftex.def Info: img/AttackAccel0T40X.png used on input line 144.
+(pdftex.def)             Requested size: 452.9679pt x 244.63466pt.
+ [16 <./img/AttackAccel-1XZoomed.png>]
+<img/AttackAccel0T45X.png, id=139, 1052.93375pt x 565.11125pt>
 File: img/AttackAccel0T45X.png Graphic file (type png)
 
 <use img/AttackAccel0T45X.png>
-Package pdftex.def Info: img/AttackAccel0T45X.png used on input line 142.
+Package pdftex.def Info: img/AttackAccel0T45X.png used on input line 150.
 (pdftex.def)             Requested size: 452.9679pt x 243.11382pt.
- [16 <./img/AttackAccel-1XZoomed.png>]
-<img/AttackAccel0T50X.png, id=139, 1052.93375pt x 568.1225pt>
+ [17 <./img/AttackAccel0T40X.png>]
+<img/AttackAccel0T50X.png, id=143, 1052.93375pt x 568.1225pt>
 File: img/AttackAccel0T50X.png Graphic file (type png)
 
 <use img/AttackAccel0T50X.png>
-Package pdftex.def Info: img/AttackAccel0T50X.png used on input line 148.
+Package pdftex.def Info: img/AttackAccel0T50X.png used on input line 156.
 (pdftex.def)             Requested size: 452.9679pt x 244.40927pt.
- [17 <./img/AttackAccel0T45X.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
+ [18 <./img/AttackAccel0T45X.png> <./img/AttackAccel0T50X.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
 
-<img/MultiAttackAccelPlotXNoCrash.png, id=143, 1050.92625pt x 567.11874pt>
+<img/MultiAttackAccelPlotXNoCrash.png, id=148, 1050.92625pt x 567.11874pt>
 File: img/MultiAttackAccelPlotXNoCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotXNoCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotXNoCrash.png used on input lin
-e 170.
+e 178.
 (pdftex.def)             Requested size: 452.9679pt x 244.43608pt.
- [18 <./img/AttackAccel0T50X.png>]
-<img/MultiAttackAccelPlotAccelNoCrash.png, id=148, 1048.91875pt x 565.11125pt>
+
+<img/MultiAttackAccelPlotAccelNoCrash.png, id=149, 1048.91875pt x 565.11125pt>
 File: img/MultiAttackAccelPlotAccelNoCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotAccelNoCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotAccelNoCrash.png used on input
- line 176.
+ line 184.
 (pdftex.def)             Requested size: 452.9679pt x 244.03647pt.
 
-<img/MultiAttackAccelPlotSpeedNoCrash.png, id=149, 1051.93pt x 567.11874pt>
+<img/MultiAttackAccelPlotSpeedNoCrash.png, id=150, 1051.93pt x 567.11874pt>
 File: img/MultiAttackAccelPlotSpeedNoCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotSpeedNoCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotSpeedNoCrash.png used on input
- line 181.
+ line 189.
 (pdftex.def)             Requested size: 452.9679pt x 244.20244pt.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
- [19 <./img/MultiAttackAccelPlotXNoCrash.png> <./img/MultiAttackAccelPlotAccelN
-oCrash.png>]
+ [19 <./img/MultiAttackAccelPlotXNoCrash.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -818,50 +840,49 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
-
-<img/MultiAttackAccelPlotXCrash.png, id=153, 1050.92625pt x 565.11125pt>
+ [20 <./img/MultiAttackAccelPlotAccelNoCrash.png> <./img/MultiAttackAccelPlotSp
+eedNoCrash.png>]
+<img/MultiAttackAccelPlotXCrash.png, id=157, 1050.92625pt x 565.11125pt>
 File: img/MultiAttackAccelPlotXCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotXCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotXCrash.png used on input line 
-201.
+209.
 (pdftex.def)             Requested size: 452.9679pt x 243.57083pt.
- [20 <./img/MultiAttackAccelPlotSpeedNoCrash.png>]
-<img/MultiAttackAccelPlotAccelCrash.png, id=157, 1052.93375pt x 569.12625pt>
+
+<img/MultiAttackAccelPlotAccelCrash.png, id=158, 1052.93375pt x 569.12625pt>
 File: img/MultiAttackAccelPlotAccelCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotAccelCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotAccelCrash.png used on input l
-ine 207.
+ine 215.
 (pdftex.def)             Requested size: 452.9679pt x 244.8411pt.
 
-<img/MultiAttackAccelPlotSpeedCrash.png, id=158, 1051.93pt x 567.11874pt>
+<img/MultiAttackAccelPlotSpeedCrash.png, id=159, 1051.93pt x 567.11874pt>
 File: img/MultiAttackAccelPlotSpeedCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotSpeedCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotSpeedCrash.png used on input l
-ine 212.
+ine 220.
 (pdftex.def)             Requested size: 452.9679pt x 244.20244pt.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
- [21 <./img/MultiAttackAccelPlotXCrash.png> <./img/MultiAttackAccelPlotAccelCra
-sh.png>]
+ [21 <./img/MultiAttackAccelPlotXCrash.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-
-<img/AttackXSimulation.png, id=162, 1124.2pt x 843.15pt>
+ [22 <./img/MultiAttackAccelPlotAccelCrash.png> <./img/MultiAttackAccelPlotSpee
+dCrash.png>] <img/AttackXSimulation.png, id=166, 1124.2pt x 843.15pt>
 File: img/AttackXSimulation.png Graphic file (type png)
 
 <use img/AttackXSimulation.png>
-Package pdftex.def Info: img/AttackXSimulation.png used on input line 230.
+Package pdftex.def Info: img/AttackXSimulation.png used on input line 238.
 (pdftex.def)             Requested size: 452.9679pt x 339.72418pt.
- [22 <./img/MultiAttackAccelPlotSpeedCrash.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -890,7 +911,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[23 <./img/AttackXSimulation.png>]
+ [23 <./img/AttackXSimulation.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -900,7 +921,7 @@ Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 
-Overfull \hbox (5.11208pt too wide) in paragraph at lines 272--274
+Overfull \hbox (5.11208pt too wide) in paragraph at lines 280--282
 \OT1/cmr/m/n/12 L'attacco per-tanto avr un pat-tern sim-ile a liv-ello tem-po-r
 ale, la vari-abile  l'inizio dell'attacco
  []
@@ -914,7 +935,9 @@ Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
-Missing character: There is no   in font cmr12!
+Missing character: There is no ¨ in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ² in font cmr12!
 ) [24]
 \openout2 = `chapters/conclusion.aux'.
 
@@ -932,13 +955,13 @@ Missing character: There is no ¹ in font cmr12!
 (./chapters/intro.aux) (./chapters/design.aux) (./chapters/implementation.aux)
 (./chapters/result.aux) (./chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 7531 strings out of 494953
- 113307 string characters out of 6180976
- 204934 words of memory out of 5000000
- 10641 multiletter control sequences out of 15000+600000
+ 7536 strings out of 494953
+ 113442 string characters out of 6180976
+ 205934 words of memory out of 5000000
+ 10645 multiletter control sequences out of 15000+600000
  9679 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,11n,41p,783b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,41p,781b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/font
@@ -947,10 +970,10 @@ s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
 c/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti12.pfb>
-Output written on documentation.pdf (26 pages, 1304871 bytes).
+Output written on documentation.pdf (26 pages, 1335283 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
+ 202 PDF objects out of 1000 (max. 8388607)
  118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

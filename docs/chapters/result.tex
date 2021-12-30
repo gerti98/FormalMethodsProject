@@ -14,10 +14,10 @@ La distanze media tra le due auto è pari a \textbf{18.49m}. Dopo un iniziale pe
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/accel_speed.png}
-	\caption{}
+	\caption{Velocità e accelerazione della LeadingCar (rispettivamente rossa e viola) e FollowingCar (rispettivamente gialla e marrone)}
 \end{figure}
 
-Dalla figura sopra riportata è inoltre osservabile come negli istanti iniziali la following car abbia una accelerazione positiva maggiore di quella della leading. Questo si riflette inoltre sulle relative velocità. Il motivo di questo comportamento è dovuto all'iniziale periodo di transizione in cui la following car recupera la distanza iniziale (molto maggiore di 15m) dalla leading car. 
+Dalla figura sopra riportata è inoltre osservabile come negli istanti iniziali la Following Car abbia una accelerazione positiva maggiore di quella della Leading Car. Questo si riflette inoltre sulle relative velocità. Il motivo di questo comportamento è dovuto all'iniziale periodo di transizione in cui la Following Car recupera la distanza iniziale (molto maggiore di 15m) dalla Leading Car. 
 
 \subsection{Attacco all'accelerazione}
 \subsubsection{Attacco Semplice}
@@ -38,18 +38,18 @@ I risultati ottenuti sono stati successivamente eleborati così da estrapolare i
 
 Come si può notare, è possibile individuare tre casi ben distinti:
 \begin{itemize}
-	\item \textbf{Attacchi con accelerazione negativa}: La following car è portata a rallentare con andamento lineare fino a cambiare la propria direzione di marcia. In questo caso le macchine tendono ad allontanarsi e l'incidente non avrà luogo. Inoltre è doveroso sottolineare che la following car perde completamente la capacità di inseguimento della leading car. Non ci sarà quindi convergenza fra following e leading car.
-	\item \textbf{Attacchi con accelerazione pari a 0}: dal grafico emerge una chiara necessità di uno studio più approfondito di questa casistica in quanto non si delinea alcun risultato conclusivo. Essendo che l'accelerazione resta costante e pari a 0, la velocità della following car rimane costante al valore nel momento \textbf{Attack\_time}. La presenza o meno di incidenti dipende quindi proprio dal valore della velocità e quindi da \textbf{Attack\_time}
-	\item \textbf{Attacchi con accelerazione positiva}: La following car è portata ad aumentare la propria velocità con andamento lineare . In questo caso le macchine tendono ad avvicinarsi e l'incidente avrà luogo.
+	\item \textbf{Attacchi con accelerazione negativa}: La Following Car è portata a rallentare con andamento lineare fino a cambiare la propria direzione di marcia. In questo caso le macchine tendono ad allontanarsi e l'incidente non avrà luogo. Inoltre è doveroso sottolineare che la Following Car perde completamente la capacità di inseguimento della Leading Car. Non ci sarà quindi convergenza fra le due vetture.
+	\item \textbf{Attacchi con accelerazione pari a 0}: Dal grafico emerge una chiara necessità di uno studio più approfondito di questa casistica in quanto non si delinea alcun risultato conclusivo. Essendo che l'accelerazione resta costante e pari a 0, la velocità della Following Car rimane costante al valore nel momento \textbf{Attack\_time}. La presenza o meno di incidenti dipende quindi proprio dal valore della velocità e quindi da \textbf{Attack\_time}
+	\item \textbf{Attacchi con accelerazione positiva}: La Following Car è portata ad aumentare la propria velocità con andamento lineare . In questo caso le macchine tendono ad avvicinarsi e l'incidente avrà luogo.
 \end{itemize}
 Esistono tuttavia condizioni speciali che è doveroso sottolineare:
 \begin{itemize}
-	\item \textbf{Attacchi con accelerazione negativa}: Se la leading car decellerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la following car sotto attacco, allora in tal caso l'incidente avverrebbe
-	\item \textbf{Attacchi con accelerazione positiva}: Se la leading car accelerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la following car sotto attacco, allora in tal caso l'incidente non avverrebbe
+	\item \textbf{Attacchi con accelerazione negativa}: Se la Leading Car decellerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la Following Car sotto attacco, allora in tal caso l'incidente avverrebbe
+	\item \textbf{Attacchi con accelerazione positiva}: Se la Leading Car accelerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la Following Car sotto attacco, allora in tal caso l'incidente non avverrebbe
 \end{itemize}
 \paragraph{Risultati Co-Simulazione}
 Con l'obiettivo di rafforzare quanto appena descritto  e individuato tramite l'analisi dei risultati del DSE, vengono qui riportati tre casi fondamentali.
-\subparagraph{Attacchi con accelerazione positiva pari a 1} Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
+\subparagraph{Attacchi con accelerazione positiva pari a 1} Di seguito sono riportati i grafici in cui sono raffigurati le posizioni (Fig. 12), le velocità (Fig. 13) le accelerazioni (Fig. 14) delle macchine e l'accelerazione dell'algoritmo di inseguimento (Fig. 15).
 L'attacco è stato eseguito con:
 \begin{itemize}
 	\item \textbf{attack\_value}: 1
@@ -60,35 +60,35 @@ L'attacco è stato eseguito con:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/AttackAccel1X.png}
-	\caption{}
+	\caption{Grafico raffigurante le posizioni dei due veicoli in questo caso di attacco semplice}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/AttackAccel1Speed.png}
-	\caption{}
+	\caption{Grafico raffigurante le velocità dei due veicoli in questo caso di attacco semplice}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/AttackAccel1Accel.png}
-	\caption{}
+	\caption{Grafico raffigurante le accelerazioni dei due veicoli in questo caso di attacco semplice}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/AttackAccel1AccelAlgo.png}
-	\caption{}
+	\caption{Grafico raffigurante l'accelerazione suggerita da Following Algorithm in questo caso di attacco semplice}
 \end{figure}
 
 Dalle osservazioni fatte si può evincere quanto segue:
 \begin{itemize}
-	\item La following car e la leading car fanno un incidente. Essendo che l'accelerazione è costante e tale che $ |Attack\_value| > 0 $, allora la velocità tende ad aumentare linearmente. L'allontanamento da leading avverrà in modo quadratico nel tempo
-	\item L'accellerazione che following algorithm pensa di dire a following car è sempre minore con andamento non lineare. Avrà sicuramente delle micro-oscillazioni ma sono quasi impercettibili a causa dell'elevata distanza dalla leading car. Quindi una decellerazione/accellerazione della leading car ha un effetto quasi trascurabile su following Algorithm
+	\item La Following Car e la Leading Car fanno un incidente. Essendo che l'accelerazione è costante e tale che $ |Attack\_value| > 0 $, allora la velocità tende ad aumentare linearmente. L'allontanamento da Leading Car avverrà in modo quadratico nel tempo
+	\item L'accellerazione che Following Algorithm pensa di dire a Following Car è sempre minore con andamento non lineare. Avrà sicuramente delle micro-oscillazioni ma sono quasi impercettibili a causa dell'elevata distanza dalla Leading Car. Quindi una decellerazione/accellerazione della Leading Car ha un effetto quasi trascurabile su Following Algorithm
 \end{itemize}
 
 \subparagraph{Attacchi con accelerazione negativa pari a -1}
-Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
+Di seguito viene riportato il grafico raffigurate le posizioni dei due veicoli (Fig. 16). I grafici di velocità e accelerazione sono deducibili dal lettore osservando quelli dell'attacco precedente.
 L'attacco è stato eseguito con:
 \begin{itemize}
 	\item \textbf{attack\_value}: -1
@@ -97,18 +97,18 @@ L'attacco è stato eseguito con:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/AttackAccel-1XZoomed.png}
-	\caption{Ingrandimento del grafico delle posizioni dei due veicoli}
+	\caption{Ingrandimento del grafico delle posizioni dei due veicoli in questo caso di attacco semplice}
 \end{figure}
 
 Dalle osservazioni fatte si può evincere quanto segue:
 \begin{itemize}
-	\item La following car non fa un incidente e continua la sua corsa in senso opposto rispetto alla leading car. Ogni considerazione fatta per il caso precedente rispetto a accelerazione e velocità sono ancora valide ma speculari.
-	\item La velocità di following car decresce linearmente fino ad annullarsi e poi a cambiare segno (facendo muovere la macchina in retromarcia)
-	\item Ogni considerazione fatta nel caso precedente rispetto all'accelerazione che following algorithm pensa di dire a following  car è tutt'ora valida e speculare al caso precedente.
+	\item La Following Car non fa un incidente e continua la sua corsa in senso opposto rispetto alla Leading Car. Ogni considerazione fatta per il caso precedente rispetto a accelerazione e velocità sono ancora valide ma speculari.
+	\item La velocità di Following Car decresce linearmente fino ad annullarsi e poi a cambiare segno (facendo muovere la macchina in retromarcia)
+	\item Ogni considerazione fatta nel caso precedente rispetto all'accelerazione che Following Algorithm pensa di dire a Following  Car è tutt'ora valida e speculare al caso precedente.
 \end{itemize}
 
 \subparagraph{Attacchi con accelerazione pari a 0}
-
+Nella tabella seguente sono riportati le diverse simulazioni effettuate per il caso \textbf{attack\_value = 0}. Per ogni casistica viene indicato il diverso tempo di attacco, una idea approssimativa della velocità a cui la Following Car si stabilizza ed infine una breve descrizione di alcune osservazioni fatto sul risultato ottenuto.
 
 \renewcommand{\arraystretch}{1.5}
 \begin{center}
@@ -137,24 +137,32 @@ Dalle osservazioni fatte si può evincere quanto segue:
 \end{table}
 \end{center}
 
+A dimostrazione dell'elevata variabilità del risultato vengono ora proposti tre grafici raffiguranti le posizioni dei due veicoli nei tre casi a convergenza sopra descritti. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/AttackAccel0T40X.png}
+	\caption{Grafico della posizione dei veicoli nel caso Tempo di Attacco a 40s}
+\end{figure}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/AttackAccel0T45X.png}
-	\caption{Grafico posizione veicoli nel caso Tempo di Attacco a 45s}
+	\caption{Grafico della posizione dei veicoli nel caso Tempo di Attacco a 45s}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/AttackAccel0T50X.png}
-	\caption{Grafico posizione veicoli nel caso Tempo di Attacco a 50s}
+	\caption{Grafico della posizione dei veicoli nel caso Tempo di Attacco a 50s}
 \end{figure}
 
-I grafici in Fig. 17 e 18, ad esempio, mostrano come, nonostante vengano simulati attacchi con tempi di attacco molto simili, il risultato sia completamente diverso.
+I grafici in Fig. 17 e 18, ad esempio, mostrano come, nonostante vengano simulati attacchi con \textbf{attack\_time} molto simili, il risultato sia completamente diverso.
 \subsubsection{Attacco Multiplo}
-In questa sezione vengono riportati due diverse condizioni di attacco in cui quest'ultimo ha una durata di un certo numero di step e si ripete più volte nel tempo. L'obiettivo è quello di individuare una condizione in cui,nonostante gli attacchi ripetuti, il sistema risulta tollerante e uno invece in cui l'attacco porta a un incidente fra i due veicoli
+In questa sezione vengono riportate due diverse condizioni di attacco in cui quest'ultimo ha una durata di un certo numero di step e si ripete più volte nel tempo. L'obiettivo è quello di individuare una condizione in cui,nonostante gli attacchi ripetuti, il sistema risulta tollerante e uno invece in cui l'attacco porta ad un incidente fra i due veicoli
 \subparagraph{Risultati Co-Simulazione}
 \subparagraph{Attacco senza incidente}
-L'obiettivo della presente co-simulazione è quello di andare ad individuare un attacco in cui la presenza di più occorrenze risulta non chiave nel verificarsi di un incidente fra i due veicoli. In particolare viene posto come obiettivo quello di studiare il comportamento della following car al termine dell'attacco multiplo. Di seguito sono riportate le configurazioni dell'attacco in esame.
+L'obiettivo della presente co-simulazione è quello di andare ad individuare un attacco in cui la presenza di più occorrenze risulta essere un elemento non chiave nel verificarsi di un incidente fra i due veicoli. In particolare viene posto come obiettivo quello di studiare il comportamento della Following Car al termine dell'attacco multiplo. Di seguito sono riportate le configurazioni dell'attacco in esame.
 \begin{itemize}
 	\item \textbf{Attack\_occurrencies}: 2
 	\item \textbf{Attack\_duration}: 5s
@@ -168,24 +176,24 @@ Vengono ora riportati i risultati della co-simulazione nelle immagini seguenti.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotXNoCrash.png}
-	\caption{Grafico di posizione dei due veicoli nel caso di attacco multiplo. Notare il non verificarsi di un incidente e il ritorno a convergenza.}
+	\caption{Grafico di posizione dei due veicoli nel caso di attacco multiplo in esame. Notare il non verificarsi di un incidente e il ritorno a convergenza.}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotAccelNoCrash.png}
-	\caption{Grafico delle accelerazioni nel caso di attacco multiplo.}
+	\caption{Grafico delle accelerazioni nel caso di attacco multiplo in esame.}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotSpeedNoCrash.png}
-	\caption{Grafico di velocità dei due veicoli nel caso di attacco multiplo.}
+	\caption{Grafico di velocità dei due veicoli nel caso di attacco multiplo in esame.}
 \end{figure}
 
-Osservando i grafici sopra descritti è possibile osservare come, nonostante il verificarsi di molteplici attacchi, la following car non crei alcun incidente. Inoltre è doveroso soffermare l'attenzione sulla tolleranza del sistema a questo tipo di attacco, al termine del quale la following car si avvicina nuovamente portandosi alla distanza di 15m dalla leading car.
+Osservando i grafici sopra descritti è possibile osservare come, nonostante il verificarsi di molteplici attacchi, la Following Car non crei alcun incidente. Inoltre è doveroso soffermare l'attenzione sulla tolleranza del sistema a questo tipo di attacco, al termine del quale la Following Car si avvicina nuovamente portandosi alla distanza di 15m dalla Leading Car.
 
 \subparagraph{Attacco con incidente}
-L'obiettivo della presente co-simulazione è quello di andare ad individuare un attacco in cui la presenza di più occorrenze risulta chiave nel verificarsi di un incidente fra i due veicoli. Di seguito sono riportate le configurazioni dell'attacco in esame.
+L'obiettivo della presente co-simulazione è quello di andare ad individuare un attacco in cui la presenza di più occorrenze risulta essere un elemento chiave nel verificarsi di un incidente fra i due veicoli. Di seguito sono riportate le configurazioni dell'attacco in esame.
 \begin{itemize}
 \item \textbf{Attack\_occurrencies}: 2
 \item \textbf{Attack\_duration}: 2s
@@ -199,21 +207,21 @@ Vengono ora riportati i risultati della co-simulazione nelle immagini seguenti.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotXCrash.png}
-	\caption{Grafico di posizione dei due veicoli nel caso di attacco multiplo. Notare il verificarsi di un incidente.}
+	\caption{Grafico di posizione dei due veicoli nel caso di attacco multiplo in esame. Notare il verificarsi di un incidente.}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotAccelCrash.png}
-	\caption{Grafico delle accelerazioni nel caso di attacco multiplo.}
+	\caption{Grafico delle accelerazioni nel caso di attacco multiplo in esame.}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotSpeedCrash.png}
-	\caption{Grafico di velocità dei due veicoli nel caso di attacco multiplo.}
+	\caption{Grafico di velocità dei due veicoli nel caso di attacco multiplo in esame.}
 \end{figure}
 
-Osservando i grafici sopra descritti è possibile osservare come il secondo evento di attacco risulta fondamentale nel verificarsi dell'incidente. Senza questo secondo evento infatti la following car si sarebbe nuovamente distanziata dalla leading car così da raggiungere la distanza richiesta di 15m.
+Osservando i grafici sopra descritti è possibile osservare come il secondo evento di attacco risulta fondamentale nel verificarsi dell'incidente. Senza questo secondo evento infatti la Following Car si sarebbe nuovamente distanziata dalla Leading Car così da raggiungere la distanza richiesta di 15m.
 
 \subsection{Attacco alla X}
 \subsubsection{Attacco Semplice}
@@ -224,14 +232,14 @@ Per cercare di dare un'interpretazione ai risultati del successivo studio verrà
 	\item \textbf{attack\_time}: 20s
 \end{itemize}
 
-Si ottiene il seguente plot:
+Si ottiene il seguente grafico:
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/AttackXSimulation.png}
-	\caption{Posizione x della LeadingCar (verde) e FollowingCar (blu)}
+	\caption{Posizione x della Leading Car (verde) e Following Car (blu)}
 \end{figure}
-Dal seguente risultato è possibile evincere tre differenti zone di comportamento della following car: nel \textbf{primo caso} nel quale l'attacco non viene ancora effettuato, la following car tende ad avvicinarsi alla leading car alla distanza configurata; nel \textbf{secondo caso}, dal un tempo di 20s ad uno di circa 40s, l'attacco inizierà ma la leading car non avrà superato ancora l'\textbf{attack\_value} impostato, che rappresenta la (alterata) posizione della following car: quest'ultima penserà di trovarsi davanti e decelererà; il \textbf{terzo caso}, dopo 40s, nel quale la leading car ha superato l'attack value e perciò la following car inizierà a riavvicinarsi fino all'impatto tra le due auto.
-Per come è configurata la leading car, ovvero che tenderà sempre ad andare "in avanti" con qualche oscillazione nella velocità, è facile intuire che \textbf{un incidente con questo tipo di attacco per un tempo sufficiente avrà sempre luogo}, in quanto esisterà sempre un tempo nella quale la leading car supererà l'attack\_value, per quanto elevato possa essere quest'ultimo.  
+Dal seguente risultato è possibile evincere tre differenti zone di comportamento della Following Car: nel \textbf{primo caso} nel quale l'attacco non viene ancora effettuato, la Following Car tende ad avvicinarsi alla Leading Car alla distanza configurata; nel \textbf{secondo caso}, da un tempo di 20s ad uno di circa 40s, l'attacco inizierà ma la Leading Car non avrà superato ancora l'\textbf{attack\_value} impostato, che rappresenta la (alterata) posizione della Following Car: quest'ultima penserà di trovarsi davanti e decelererà; il \textbf{terzo caso}, dopo 40s, nel quale la Leading Car ha superato l'attack value e perciò la Following Car inizierà a riavvicinarsi fino all'impatto tra le due auto.
+Per come è configurata la Leading Car, ovvero che tenderà sempre ad andare "in avanti" con qualche oscillazione nella velocità, è facile intuire che \textbf{un incidente con questo tipo di attacco per un tempo sufficiente avrà sempre luogo}, in quanto esisterà sempre un tempo nella quale la Leading Car supererà l'attack\_value, per quanto elevato possa essere quest'ultimo.  
 \subparagraph{Risultati DSE}
 E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a variare l'\textbf{attack\_value} e l'\textbf{attack\_time} con i seguenti parametri:
 \begin{itemize}
@@ -260,7 +268,7 @@ E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a varia
 Come si può notare il tempo è una variabile importante per questo tipo di attacco, con un tempo sufficientemente alto l'attacco ha sempre luogo come detto in precedenza.
 
 \subsection{Attacco Multiplo}
-Sono stati individuati quattro diverse configurazioni che portano luogo a quattro classi di risultati diversi:
+Sono state individuate quattro diverse configurazioni che danno luogo a quattro classi di risultati diversi:
 \begin{itemize}
 	\item \textbf{Attack\_occurrencies}: 3
 	\item \textbf{Attack\_duration}: 2s
@@ -284,4 +292,4 @@ L'attacco pertanto avrà un pattern simile a livello temporale, la variabile è 
 		\hline
 	\end{tabular}
 \end{center}
-Una semplice interpretazione di questi risultati si basa sul fatto che il following algorithm produce un'accelerazione maggiore in caso la distanza tra le due auto sia maggiore: considerato che la distanza della following car vista dal following è fissa (per via dell'attacco in corso), nel caso il tempo di inizio sia maggiore, maggiore sarà la posizione della leading car e perciò maggiore sarà l'accelerazione in input che porterà ad una collisione nel caso di Attack time pari a 70s.
+Una semplice interpretazione di questi risultati si basa sul fatto che il Following Algorithm produce un'accelerazione maggiore in caso la distanza tra le due auto sia maggiore: considerato che la distanza della Following Car vista dal Following Algorithm è fissa (per via dell'attacco in corso), nel caso il tempo di inizio dell'attacco sia maggiore, maggiore sarà la posizione della Leading Car e perciò maggiore sarà l'accelerazione in input. Questo è ciò che porta ad una collisione nel caso di Attack time pari a 70s.

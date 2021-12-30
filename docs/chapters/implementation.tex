@@ -4,7 +4,7 @@ Nella seguente figura è possibile osservare le connessioni logiche tra tre FMU 
 \begin{itemize}
 	\item \textbf{FMU of the leading car}: questa FMU implementa il comportamento della leading car. Per funzionare non ha bisogno di alcun input da altre FMU e produce in output la posizione della macchina, la velocità e la sua accelerazione. 
 	\item \textbf{FMU of the following algorithm}: questa FMU implementa l'algoritmo di inseguimento. Presi in ingresso i parametri di posizione, velocità e accelerazione della leading car ed i parametri di posizione e velocità della following car produce in output l'accelerazione per la following car.
-	\item \textbf{FMU of the following car}: questa FMU implementa il comportamento della following carò Per funzionare prende in ingresso l'accelerazione dalla precedente FMU e produce in output la sua posizione e velocità.
+	\item \textbf{FMU of the following car}: questa FMU implementa il comportamento della following car. Per funzionare prende in ingresso l'accelerazione dalla precedente FMU e produce in output la sua posizione e velocità.
 \end{itemize}
 \begin{figure}[H]
 	\centering
@@ -21,14 +21,14 @@ In figura 2 viene rappresentata l'overview del relativo Multi-Model sviluppato c
 \end{figure}
 
 \subsection{Attacco all'accelerazione}
-A differenza dello schema presentato nel VanillaCase, viene ora aggiunto un ulteriore FMU situato fra "FMU of the following algorithm" e "FMU of the following car" già presenti. Il nuovo FMU implementa con strategia \textit{Man-in-the-Middle} un attacco di tipo data alteration sull'accelerazione passata tra il following algorithm e la following car. Fare riferimento alla sezione 3.5 per dettagli sul comportamento dell'attacco.
+A differenza dello schema presentato nel VanillaCase, viene ora aggiunta una ulteriore FMU situata fra "FMU of the following algorithm" e "FMU of the following car" già presenti. La nuova FMU implementa con strategia \textit{Man-in-the-Middle} un attacco di tipo data alteration sull'accelerazione passata tra il Following Algorithm e la Following Car. Fare riferimento alla sezione 3.5 per dettagli sul comportamento dell'attacco.
 \begin{figure}[H]
 	\centering
 	\includegraphics{img/AccelAttackSchema.pdf}
 	\caption{Multi-Model schema dell'Attacco alla Accelerazione}
 \end{figure}
 
-In figura 4 viene rappresentata l'overview del relativo Multi-Model sviluppato con il tool INTO-CPS. 
+In figura 4 e 5 viene rappresentata l'overview del relativo Multi-Model sviluppato con il tool INTO-CPS. 
 
 \begin{figure}[H]
 	\centering
@@ -42,7 +42,7 @@ In figura 4 viene rappresentata l'overview del relativo Multi-Model sviluppato c
 \end{figure}
 
 \subsection{Attacco alla Posizione }
-A differenza dello schema presentato nel VanillaCase, viene ora aggiunto un ulteriore FMU situato fra "FMU of the following car" e "FMU of the following algorithm" già presenti. Il nuovo FMU implementa con strategia \textit{Man-in-the-Middle} un attacco di tipo data alteration sulla posizione passata tra la following car e il following algorithm. Fare riferimento alla sezione 3.5 per dettagli sul comportamento dell'attacco.
+A differenza dello schema presentato nel VanillaCase, viene ora aggiunta una ulteriore FMU situata fra "FMU of the following car" e "FMU of the following algorithm" già presenti. La nuova FMU implementa con strategia \textit{Man-in-the-Middle} un attacco di tipo data alteration sulla posizione passata tra la Following Car e il Following Algorithm. Fare riferimento alla sezione 3.5 per dettagli sul comportamento dell'attacco.
 
 \begin{figure}[H]
 	\centering
@@ -50,7 +50,7 @@ A differenza dello schema presentato nel VanillaCase, viene ora aggiunto un ulte
 	\caption{Multi-Model schema dell'Attacco alla Posizione}
 \end{figure}
 
-In figura 6 viene rappresentata l'overview del relativo Multi-Model sviluppato con il tool INTO-CPS. 
+In figura 7 e 8 viene rappresentata l'overview del relativo Multi-Model sviluppato con il tool INTO-CPS. 
 
 
 \begin{figure}[H]
@@ -65,7 +65,7 @@ In figura 6 viene rappresentata l'overview del relativo Multi-Model sviluppato c
 \end{figure}
 
 \subsection{Configurazione in Comune}
-La configurazione dei seguenti FMU verrà applicata per tutte le simulazioni che verranno effettuate.
+La configurazione delle seguenti FMU verrà applicata per tutte le simulazioni che verranno effettuate.
 \begin{itemize}
 	\item \textbf{LeadingCar}:
 	\begin{itemize}
@@ -91,7 +91,7 @@ La configurazione dei seguenti FMU verrà applicata per tutte le simulazioni che
 \subsection{Comportamento degli Attacchi}
 L'FMU che verrà utilizzata negli attacchi MITM presenterà due implementazioni diverse:
 \begin{itemize}
-\item \textbf{Attacco Semplice}: l'attacco consiste nel modificare l'input dell'AttackFMU con il valore del parametro \textbf{attack\_value} dall'istante temporale \textbf{attack\_time} fino al termine della simulazione. Tale valore viene restituito in output dall'AttackFMU. Tale FMU è implementata tramite il file Attack\_fmu.fmu.
-\item \textbf{Attacco Multi-step}: l'attacco consiste nel modificare l'input dell'AttackFMU con il valore del parametro \textbf{attack\_value} per un tempo pari a \textbf{attack\_duration}, ripetuto \textbf{attack\_occurrencies} volte e separato nel tempo da \textbf{attack\_distance} secondi. Tale valore viene restituito in output dall'AttackFMU. L'attacco inizierà dall'istante temporale \textbf{attack\_time}. Tale FMU è implementata tramite il file MultiStep\_MultiAttacks\_Fmu.fmu.
+\item \textbf{Attacco Semplice}: l'attacco consiste nel modificare l'input dell'FMU di attacco con il valore del parametro \textbf{attack\_value} dall'istante temporale \textbf{attack\_time} fino al termine della simulazione. Tale valore viene restituito in output dall'FMU di attacco. Tale FMU è implementata tramite il file Attack\_fmu.fmu.
+\item \textbf{Attacco Multi-step}: l'attacco consiste nel modificare l'input dell'FMU di attacco con il valore del parametro \textbf{attack\_value} per un tempo pari a \textbf{attack\_duration}, ripetuto \textbf{attack\_occurrencies} volte e separato nel tempo da \textbf{attack\_distance} secondi. Tale valore viene restituito in output dall'FMU di attacco. L'attacco inizierà dall'istante temporale \textbf{attack\_time}. Tale FMU è implementata tramite il file MultiStep\_MultiAttacks\_Fmu.fmu.
 
 \end{itemize}
