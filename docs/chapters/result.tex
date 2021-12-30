@@ -117,20 +117,20 @@ Dalle osservazioni fatte si può evincere quanto segue:
 		\resizebox{\textwidth}{!}{%resizing the whole table
 	\begin{tabular}{ |l|l|l|p{8cm}|  }
 		\hline
-		Stato Convergenza & Tempo di Attacco & Valore Velocità dopo Attacco& Risultato \\
+		Stato Convergenza & Tempo di Attacco & Valore Velocità Following Car dopo Attacco& Risultato \\
 		\hline
-		\multirow{3}{7em}[-6em]{\centering Prima della Convergenza} & 10 & Circa Valore Massimo & La following car fa un incidente. Accelerazione di following Algorithm sinusoidale decrescente, posizione leading car non trascurabile \\
+		\multirow{3}{7em}[-6em]{\centering Prima della Convergenza} & 10 & Circa Valore Massimo & La following car fa un incidente. Accelerazione risultato di Following Algorithm ha andamento sinusoidale decrescente, posizione leading car non trascurabile \\
 		\cline{2-4}
 
-		& 15 & Circa Valore Medio & Incidenti multipli ma la macchina non si allontana troppo dalla leading Car. Accelerazione decrescente con andamento sinusoidale \\
+		& 15 & Circa Valore Medio & Si verifica un incidente tra i veicoli. Accelerazione di Following Algorithm decrescente con andamento sinusoidale \\
 		\cline{2-4}
-		& 20 & Circa Valore Minino & Following car non fa un incidente e continua la sua corsa distanziandosi sempre più dalla leading car. l'accelerazione che il following algorithm pensa di dire a followingcar ha un andamento sinusoidale e crescente \\
+		& 20 & Circa Valore Minino & Following car non fa un incidente e continua la sua corsa distanziandosi dalla leading car. L'accelerazione risultato di Following Algorithm per following car ha un andamento sinusoidale e crescente \\
 		\hline
-		\multirow{3}{12em}[-6em]{Dopo la Convergenza} & 40 & Circa Valore Minimo & Accelerazione crescente con andamento sinusoidale. Nessun incidente ma allontanamento con movimento di Following Car in senso opposto.\\
+		\multirow{3}{12em}[-6em]{Dopo la Convergenza} & 40 & Circa Valore Minimo & Accelerazione risultato di Following Algorithm crescente con andamento sinusoidale. Nessun incidente ma allontanamento con movimento di Following Car in senso opposto.\\
 		\cline{2-4}
-		& 45 & Circa Valore Medio & Susseguirsi di avvicinamenti e allontanamenti fra i due veicoli. Se progredita nel tempo può portare ad un lento avvicinamento e ad incidente. Accelerazione di Following Algorithm ha un andamento sinusoidale che presenta un valore di picco ed un valore minimo sempre minore.\\
+		& 45 & Circa Valore Medio & Susseguirsi di avvicinamenti e allontanamenti fra i due veicoli. Se progredita nel tempo può portare ad un lento avvicinamento e ad incidente. Accelerazione di Following Algorithm ha un andamento sinusoidale decrescente.\\
 		\cline{2-4}
-		& 50 & Circa Valore Massimo & Following Car fa incidente. Accelerazione di following algorithm sinusoidale decrescente \\
+		& 50 & Circa Valore Massimo & Following Car fa un incidente con leading car. Accelerazione di Following Algorithm sinusoidale decrescente \\
 		\hline
 	\end{tabular}
 }
@@ -149,7 +149,7 @@ Dalle osservazioni fatte si può evincere quanto segue:
 	\caption{Grafico posizione veicoli nel caso Tempo di Attacco a 50s}
 \end{figure}
 
-
+I grafici in Fig. 17 e 18, ad esempio, mostrano come, nonostante vengano simulati attacchi con tempi di attacco molto simili, il risultato sia completamente diverso.
 \subsubsection{Attacco Multiplo}
 In questa sezione vengono riportati due diverse condizioni di attacco in cui quest'ultimo ha una durata di un certo numero di step e si ripete più volte nel tempo. L'obiettivo è quello di individuare una condizione in cui,nonostante gli attacchi ripetuti, il sistema risulta tollerante e uno invece in cui l'attacco porta a un incidente fra i due veicoli
 \subparagraph{Risultati Co-Simulazione}
