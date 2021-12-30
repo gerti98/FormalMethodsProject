@@ -16,10 +16,77 @@ La distanze media tra le due auto è pari a \textbf{18.49m}. Dopo un iniziale pe
 Dalla figura sopra riportata è inoltre osservabile come negli istanti iniziali la following car abbia una accelerazione positiva maggiore di quella della leading. Questo si riflette inoltre sulle relative velocità. Il motivo di questo comportamento è dovuto all'iniziale periodo di transizione in cui la following car recupera la distanza iniziale (molto maggiore di 15m) dalla leading car. 
 
 \subsection{Attacco all'accelerazione}
-\subparagraph{Attacco Semplice}
-\subparagraph{Attacco Multiplo}
-\subsubsection{Risultati DSE}
-\subsubsection{Risultati Co-Simulazione}
+\subsubsection{Attacco Semplice}
+\subparagraph{Risultati DSE}
+Come primo approccio all'analisi al sistema è stato scelto di fare uso del DSE, configurato andando a variare l'\textbf{attack\_value} e l'\textbf{attack\_time} con i seguenti parametri::
+\begin{itemize}
+	\item \textbf{Attack\_value}: [-5, -1, 0, 1, 5]
+	\item \textbf{Simulation\_time}: [0s, .., 40s] con step a 5
+\end{itemize}
+I risultati ottenuti sono stati successivamente eleborati così da estrapolare il seguente grafico che mostra la percentuale degli incidenti per ogni \textbf{attack\_value} al variare di \textbf{attack\_time}. Per individuare le condizioni di attacco è stato necessario estrapolare la distanza minima delle due macchine sull'intero tempo di simulazione.
+
+...Immagine di excel...
+
+Come si può notare, è possibile individuare tre casi ben distinti:
+\begin{itemize}
+	\item \textbf{Attacchi con accelerazione negativa}: La following car è portata a rallentare con andamento lineare fino a cambiare la propria direzione di marcia. In questo caso le macchine tendono ad allontanarsi e l'incidente non avrà luogo. Inoltre è doveroso sottolineare che la following car perde completamente la capacità di inseguimento della leading car.
+	\item \textbf{Attacchi con accelerazione pari a 0}: dal grafico emerge una chiara necessità di uno studio più approfondito di questa casistica in quanto non si delinea alcun risultato conclusivo. Essendo che l'accelerazione resta costante e pari a 0, la velocità della following car rimane costante al valore nel momento \textbf{Attack\_time}. La presenza o meno di incidenti dipende quindi proprio dal valore della velocità e quindi da \textbf{Attack\_time}
+	\item \textbf{Attacchi con accelerazione positiva}: La following car è portata ad aumentare la propria velocità con andamento lineare . In questo caso le macchine tendono ad avvicinarsi e l'incidente avrà luogo.
+\end{itemize}
+Esistono tuttavia condizioni speciali che è doveroso sottolineare:
+\begin{itemize}
+	\item \textbf{Attacchi con accelerazione negativa}: Se la leading car decellerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la following car sotto attacco, allora in tal caso l'incidente avverrebbe
+	\item \textbf{Attacchi con accelerazione positiva}: Se la leading car accelerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la following car sotto attacco, allora in tal caso l'incidente non avverrebbe
+\end{itemize}
+\subparagraph{Risultati Co-Simulazione}
+Con l'obiettivo di rafforzare quanto appena descritto  e individuato tramite l'analisi dei risultati del DSE, vengono qui riportati tre casi fondamentali.
+\subparagraph{Attacchi con accelerazione negativa pari a -1} Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
+L'attacco è stato eseguito con:
+\begin{itemize}
+	\item \textbf{attack\_value}: -1
+	\item \textbf{attack\_time}: 20s
+\end{itemize}
+........immagini......
+
+Dalle osservazioni fatte si può evincere quanto segue:
+**************************Da rivedere******************
+\begin{itemize}
+	\item La following car e la leading car fanno un incidente. Essendo che l'accelerazione è costante e tale che |Attack\_value| > 0 , allora la velocità tende ad aumentare sempre più. L'allontanamento da leading avverrà in modo esponenziale
+	\item La velocità di following car è in crescita lineare
+	\item L'accellerazione che following algorithm pensa di dire a following car è sempre minore con andamento quasi esponenziale. Avrà sicuramente delle micro-oscillazioni ma sono impercettibili a causa dell'elevata distanza dalla leading car. Quindi una decellerazione/accellerazione della leading car ha un effetto trascurabile su following Algorithm
+\end{itemize}
+
+\subparagraph{Attacchi con accelerazione positiva pari a 1}
+Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
+L'attacco è stato eseguito con:
+\begin{itemize}
+	\item \textbf{attack\_value}: 1
+	\item \textbf{attack\_time}: 20s
+\end{itemize}
+........immagini......
+
+Dalle osservazioni fatte si può evincere quanto segue:
+**************************Da rivedere******************
+\begin{itemize}
+	\item la following car non fa un incidente e continua la sua corsa in senso opposto rispetto alla leading car. Essendo che l'accelerazione è costante e tale che |Attack\_value| > 0 allora la velocità tende ad aumentare sempre più. L'allontanamento da leading avverrà in modo esponenziale
+	\item la velocità di following car decresce sempre più fino ad annullarsi e poi a cambiare segno (facendo muovere la macchina in retromarcia)
+	\item l'accellerazione che following algorithm pensa di dire a following  car è sempre maggiore e con un andamento quasi esponenziale. Avrà sicuramente delle microoscillazioni ma sono impercettibili a causa dell'elevata distanza dalla leading car. Quindi una decellerazione/accellerazione della leading car ha un effetto trascurabile su following Algorithm. Non ci sarà convergenza
+\end{itemize}
+
+\subparagraph{Attacchi con accelerazione pari a 0}
+
+
+****************inserire una tabella****************
+
+\subsubsection{Attacco Multiplo}
+In questa sezione vengono riportati due diverse condizioni di attacco in cui quest'ultimo ha una durata di un certo numero di step e si ripete più volte nel tempo. L'obiettivo è quello di individuare una condizione in cui,nonostante gli attacchi ripetuti, il sistema risulta tollerante e uno invece in cui l'attacco porta a un incidente fra i due veicoli
+\subparagraph{Risultati Co-Simulazione}
+\subparagraph{Attacco senza incidente}
+..............immagini.............
+\subparagraph{Attacco con incidente}
+..............immagini.............
+
+
 \subsection{Attacco alla X}
 \subparagraph{Attacco Semplice}
 \subsubsection{Risultati Co-Simulazione}
@@ -58,7 +125,7 @@ E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a varia
 		\hline
 	\end{tabular}
 \end{center}
-Da come si può notare il tempo è una variabile importante per questo tipo di attacco, con un tempo sufficientemente alto l'attacco ha sempre luogo come detto in precedenza.
+Come si può notare il tempo è una variabile importante per questo tipo di attacco, con un tempo sufficientemente alto l'attacco ha sempre luogo come detto in precedenza.
 
 \subparagraph{Attacco Multiplo}
 Sono stati individuati quattro diverse configurazioni che portano luogo a quattro classi di risultati diversi:
