@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.12.29)  30 DEC 2021 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2021.12.29)  30 DEC 2021 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -755,66 +755,34 @@ Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
  [14 <./img/AttackAccel0T45X.png> <./img/AttackAccel0T50X.png>]
+<img/MultiAttackAccelPlotXNoCrash.png, id=123, 1050.92625pt x 567.11874pt>
+File: img/MultiAttackAccelPlotXNoCrash.png Graphic file (type png)
 
-LaTeX Warning: File `img/MultiAttackAccelPlotXNoCrash.png' not found on input l
-ine 153.
+<use img/MultiAttackAccelPlotXNoCrash.png>
+Package pdftex.def Info: img/MultiAttackAccelPlotXNoCrash.png used on input lin
+e 153.
+(pdftex.def)             Requested size: 452.9679pt x 244.43608pt.
 
+<img/MultiAttackAccelPlotAccelNoCrash.png, id=124, 1048.91875pt x 565.11125pt>
+File: img/MultiAttackAccelPlotAccelNoCrash.png Graphic file (type png)
 
-! Package pdftex.def Error: File `img/MultiAttackAccelPlotXNoCrash.png' not fou
-nd.
+<use img/MultiAttackAccelPlotAccelNoCrash.png>
+Package pdftex.def Info: img/MultiAttackAccelPlotAccelNoCrash.png used on input
+ line 159.
+(pdftex.def)             Requested size: 452.9679pt x 244.03647pt.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.153 ...th]{img/MultiAttackAccelPlotXNoCrash.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<img/MultiAttackAccelPlotSpeedNoCrash.png, id=125, 1051.93pt x 567.11874pt>
+File: img/MultiAttackAccelPlotSpeedNoCrash.png Graphic file (type png)
 
-[15]
-
-LaTeX Warning: File `img/MultiAttackAccelPlotAccelNoCrash.png' not found on inp
-ut line 159.
-
-
-! Package pdftex.def Error: File `img/MultiAttackAccelPlotAccelNoCrash.png' not
- found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...img/MultiAttackAccelPlotAccelNoCrash.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `img/MultiAttackAccelPlotSpeedNoCrash.png' not found on inp
-ut line 164.
-
-
-! Package pdftex.def Error: File `img/MultiAttackAccelPlotSpeedNoCrash.png' not
- found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.164 ...img/MultiAttackAccelPlotSpeedNoCrash.png}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+<use img/MultiAttackAccelPlotSpeedNoCrash.png>
+Package pdftex.def Info: img/MultiAttackAccelPlotSpeedNoCrash.png used on input
+ line 164.
+(pdftex.def)             Requested size: 452.9679pt x 244.20244pt.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[16] [17]
+ [15 <./img/MultiAttackAccelPlotXNoCrash.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -823,8 +791,9 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¹ in font cmr12!
- [18]
-<img/MultiAttackAccelPlotXCrash.png, id=137, 1050.92625pt x 565.11125pt>
+ [16 <./img/MultiAttackAccelPlotAccelNoCrash.png> <./img/MultiAttackAccelPlotSp
+eedNoCrash.png>]
+<img/MultiAttackAccelPlotXCrash.png, id=132, 1050.92625pt x 565.11125pt>
 File: img/MultiAttackAccelPlotXCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotXCrash.png>
@@ -832,7 +801,7 @@ Package pdftex.def Info: img/MultiAttackAccelPlotXCrash.png used on input line
 184.
 (pdftex.def)             Requested size: 452.9679pt x 243.57083pt.
 
-<img/MultiAttackAccelPlotAccelCrash.png, id=138, 1052.93375pt x 569.12625pt>
+<img/MultiAttackAccelPlotAccelCrash.png, id=133, 1052.93375pt x 569.12625pt>
 File: img/MultiAttackAccelPlotAccelCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotAccelCrash.png>
@@ -840,7 +809,7 @@ Package pdftex.def Info: img/MultiAttackAccelPlotAccelCrash.png used on input l
 ine 190.
 (pdftex.def)             Requested size: 452.9679pt x 244.8411pt.
 
-<img/MultiAttackAccelPlotSpeedCrash.png, id=139, 1051.93pt x 567.11874pt>
+<img/MultiAttackAccelPlotSpeedCrash.png, id=134, 1051.93pt x 567.11874pt>
 File: img/MultiAttackAccelPlotSpeedCrash.png Graphic file (type png)
 
 <use img/MultiAttackAccelPlotSpeedCrash.png>
@@ -851,22 +820,20 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
- [19 <./img/MultiAttackAccelPlotXCrash.png> <./img/MultiAttackAccelPlotAccelCra
-sh.png>]
+ [17 <./img/MultiAttackAccelPlotXCrash.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¬ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-
-<img/AttackXSimulation.png, id=143, 1124.2pt x 843.15pt>
+ [18 <./img/MultiAttackAccelPlotAccelCrash.png> <./img/MultiAttackAccelPlotSpee
+dCrash.png>] <img/AttackXSimulation.png, id=142, 1124.2pt x 843.15pt>
 File: img/AttackXSimulation.png Graphic file (type png)
 
 <use img/AttackXSimulation.png>
 Package pdftex.def Info: img/AttackXSimulation.png used on input line 213.
 (pdftex.def)             Requested size: 452.9679pt x 339.72418pt.
- [20 <./img/MultiAttackAccelPlotSpeedCrash.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¨ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -895,7 +862,7 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-[21 <./img/AttackXSimulation.png>]
+ [19 <./img/AttackXSimulation.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ² in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -925,23 +892,23 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no   in font cmr12!
-) [22]
+) [20]
 \openout2 = `chapters/conclusion.aux'.
 
- (./chapters/conclusion.tex) [23
+ (./chapters/conclusion.tex) [21
 
 
 ] (./documentation.aux
 (./chapters/intro.aux) (./chapters/design.aux) (./chapters/implementation.aux)
 (./chapters/result.aux) (./chapters/conclusion.aux)) ) 
 Here is how much of TeX's memory you used:
- 7486 strings out of 494953
- 111926 string characters out of 6180976
+ 7496 strings out of 494953
+ 112438 string characters out of 6180976
  202933 words of memory out of 5000000
- 10601 multiletter control sequences out of 15000+600000
- 9848 words of font info for 36 fonts, out of 8000000 for 9000
+ 10612 multiletter control sequences out of 15000+600000
+ 9679 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,41p,783b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,41p,782b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/font
@@ -949,12 +916,11 @@ s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
-2.pfb>
-Output written on documentation.pdf (24 pages, 722895 bytes).
+/cmti12.pfb>
+Output written on documentation.pdf (22 pages, 822219 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
- 116 compressed objects within 2 object streams
+ 177 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
