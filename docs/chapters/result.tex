@@ -11,7 +11,11 @@ E' stata effettuata una simulazione nel caso base per accertarsi che il comporta
 
 La distanze media tra le due auto è pari a \textbf{18.49m}. Dopo un iniziale periodo di transizione di circa 20s il sistema raggiunge la convergenza attesa e i due veicoli proseguono il percorso ad una distanza approssimativa di 15m fino a fine simulazione.
 
-... immagine accel\_speed ...
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/accel_speed.png}
+	\caption{}
+\end{figure}
 
 Dalla figura sopra riportata è inoltre osservabile come negli istanti iniziali la following car abbia una accelerazione positiva maggiore di quella della leading. Questo si riflette inoltre sulle relative velocità. Il motivo di questo comportamento è dovuto all'iniziale periodo di transizione in cui la following car recupera la distanza iniziale (molto maggiore di 15m) dalla leading car. 
 
@@ -21,7 +25,7 @@ Dalla figura sopra riportata è inoltre osservabile come negli istanti iniziali 
 Come primo approccio all'analisi al sistema è stato scelto di fare uso del DSE, configurato andando a variare l'\textbf{attack\_value} e l'\textbf{attack\_time} con i seguenti parametri::
 \begin{itemize}
 	\item \textbf{Attack\_value}: [-5, -1, 0, 1, 5]
-	\item \textbf{Simulation\_time}: [0s, .., 40s] con step a 5
+	\item \textbf{Attack\_time}: [0s, .., 40s] con step a 5
 \end{itemize}
 I risultati ottenuti sono stati successivamente eleborati così da estrapolare il seguente grafico che mostra la percentuale degli incidenti per ogni \textbf{attack\_value} al variare di \textbf{attack\_time}. Per individuare le condizioni di attacco è stato necessario estrapolare la distanza minima delle due macchine sull'intero tempo di simulazione.
 
@@ -43,7 +47,7 @@ Esistono tuttavia condizioni speciali che è doveroso sottolineare:
 	\item \textbf{Attacchi con accelerazione negativa}: Se la leading car decellerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la following car sotto attacco, allora in tal caso l'incidente avverrebbe
 	\item \textbf{Attacchi con accelerazione positiva}: Se la leading car accelerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la following car sotto attacco, allora in tal caso l'incidente non avverrebbe
 \end{itemize}
-\subparagraph{Risultati Co-Simulazione}
+\paragraph{Risultati Co-Simulazione}
 Con l'obiettivo di rafforzare quanto appena descritto  e individuato tramite l'analisi dei risultati del DSE, vengono qui riportati tre casi fondamentali.
 \subparagraph{Attacchi con accelerazione positiva pari a 1} Diseguito sono riportati i grafici in cui sono raffigurati l'attacco alle accelerazioni (Fig ...) e le posizioni dei due veicoli (Fig ...)
 L'attacco è stato eseguito con:
@@ -212,8 +216,8 @@ Vengono ora riportati i risultati della co-simulazione nelle immagini seguenti.
 Osservando i grafici sopra descritti è possibile osservare come il secondo evento di attacco risulta fondamentale nel verificarsi dell'incidente. Senza questo secondo evento infatti la following car si sarebbe nuovamente distanziata dalla leading car così da raggiungere la distanza richiesta di 15m.
 
 \subsection{Attacco alla X}
-\subparagraph{Attacco Semplice}
-\subsubsection{Risultati Co-Simulazione}
+\subsubsection{Attacco Semplice}
+\subparagraph{Risultati Co-Simulazione}
 Per cercare di dare un'interpretazione ai risultati del successivo studio verrà prima analizzato un caso d'esempio con i seguenti parametri:
 \begin{itemize}
 	\item \textbf{attack\_value}: 200
@@ -228,7 +232,7 @@ Si ottiene il seguente plot:
 \end{figure}
 Dal seguente risultato è possibile evincere tre differenti zone di comportamento della following car: nel \textbf{primo caso} nel quale l'attacco non viene ancora effettuato, la following car tende ad avvicinarsi alla leading car alla distanza configurata; nel \textbf{secondo caso}, dal un tempo di 20s ad uno di circa 40s, l'attacco inizierà ma la leading car non avrà superato ancora l'\textbf{attack\_value} impostato, che rappresenta la (alterata) posizione della following car: quest'ultima penserà di trovarsi davanti e decelererà; il \textbf{terzo caso}, dopo 40s, nel quale la leading car ha superato l'attack value e perciò la following car inizierà a riavvicinarsi fino all'impatto tra le due auto.
 Per come è configurata la leading car, ovvero che tenderà sempre ad andare "in avanti" con qualche oscillazione nella velocità, è facile intuire che \textbf{un incidente con questo tipo di attacco per un tempo sufficiente avrà sempre luogo}, in quanto esisterà sempre un tempo nella quale la leading car supererà l'attack\_value, per quanto elevato possa essere quest'ultimo.  
-\subsubsection{Risultati DSE}
+\subparagraph{Risultati DSE}
 E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a variare l'\textbf{attack\_value} e l'\textbf{attack\_time} con i seguenti parametri:
 \begin{itemize}
 	\item \textbf{Attack\_value}: [0 .. 200] con step a 1
@@ -255,7 +259,7 @@ E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a varia
 \end{center}
 Come si può notare il tempo è una variabile importante per questo tipo di attacco, con un tempo sufficientemente alto l'attacco ha sempre luogo come detto in precedenza.
 
-\subparagraph{Attacco Multiplo}
+\subsection{Attacco Multiplo}
 Sono stati individuati quattro diverse configurazioni che portano luogo a quattro classi di risultati diversi:
 \begin{itemize}
 	\item \textbf{Attack\_occurencies}: 3

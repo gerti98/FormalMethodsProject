@@ -14,7 +14,11 @@ Nella seguente figura è possibile osservare le connessioni logiche tra tre FMU 
 
 In figura 2 viene rappresentata l'overview del relativo Multi-Model sviluppato con il tool INTO-CPS. 
 
-... Overview Vanilla Case ...
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/OverviewVanilla.png}
+	\caption{Multi-Model Overview del Vanilla Case}
+\end{figure}
 
 \subsection{Attacco all'accelerazione}
 A differenza dello schema presentato nel VanillaCase, viene ora aggiunto un ulteriore FMU situato fra "FMU of the following algorithm" e "FMU of the following car" già presenti. Il nuovo FMU implementa con strategia \textit{Man-in-the-Middle} un attacco di tipo data alteration sull'accelerazione passata tra il following algorithm e la following car. Fare riferimento alla sezione 3.5 per dettagli sul comportamento dell'attacco.
@@ -26,9 +30,16 @@ A differenza dello schema presentato nel VanillaCase, viene ora aggiunto un ulte
 
 In figura 4 viene rappresentata l'overview del relativo Multi-Model sviluppato con il tool INTO-CPS. 
 
-... Overview Caso Singolo ...
-... Overview Caso Multiplo ...
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/OverviewAccelSingle.png}
+	\caption{Multi-Model Overview dell'attacco all'accelerazione (caso attacco semplice)}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/OverviewAccelMulti.png}
+	\caption{Multi-Model Overview dell'attacco all'accelerazione (caso attacco multiplo)}
+\end{figure}
 
 \subsection{Attacco alla Posizione }
 A differenza dello schema presentato nel VanillaCase, viene ora aggiunto un ulteriore FMU situato fra "FMU of the following car" e "FMU of the following algorithm" già presenti. Il nuovo FMU implementa con strategia \textit{Man-in-the-Middle} un attacco di tipo data alteration sulla posizione passata tra la following car e il following algorithm. Fare riferimento alla sezione 3.5 per dettagli sul comportamento dell'attacco.
@@ -41,8 +52,17 @@ A differenza dello schema presentato nel VanillaCase, viene ora aggiunto un ulte
 
 In figura 6 viene rappresentata l'overview del relativo Multi-Model sviluppato con il tool INTO-CPS. 
 
-... Overview Caso Singolo ...
-... Overview Caso Multiplo ...
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/OverviewXSingle.png}
+	\caption{Multi-Model Overview dell'attacco alla posizione (caso attacco semplice)}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/OverviewXMulti.png}
+	\caption{Multi-Model Overview dell'attacco alla posizione (caso attacco multiplo)}
+\end{figure}
 
 \subsection{Configurazione in Comune}
 La configurazione dei seguenti FMU verrà applicata per tutte le simulazioni che verranno effettuate.
