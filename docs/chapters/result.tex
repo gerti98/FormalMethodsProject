@@ -105,20 +105,32 @@ Dalle osservazioni fatte si può evincere quanto segue:
 
 \subparagraph{Attacchi con accelerazione pari a 0}
 
+
+\renewcommand{\arraystretch}{1.5}
 \begin{center}
-	\begin{tabular}{ |p{4cm}|p{3cm}|p{4cm}|p{8cm}|  }
+	\begin{table}[h]
+		\centering
+		\resizebox{\textwidth}{!}{%resizing the whole table
+	\begin{tabular}{ |l|l|l|p{8cm}|  }
 		\hline
 		Stato Convergenza & Tempo di Attacco & Valore Velocità dopo Attacco& Risultato \\
 		\hline
-		\multirow{3}{4em}{Prima della Convergenza} & 10 & Circa Valore Massimo & La following car fa un incidente. Accelerazione di following Algorithm sinusoidale decrescente, posizione leading car non trascurabile \\
+		\multirow{3}{7em}[-6em]{\centering Prima della Convergenza} & 10 & Circa Valore Massimo & La following car fa un incidente. Accelerazione di following Algorithm sinusoidale decrescente, posizione leading car non trascurabile \\
+		\cline{2-4}
+
 		& 15 & Circa Valore Medio & Incidenti multipli ma la macchina non si allontana troppo dalla leading Car. Accelerazione decrescente con andamento sinusoidale \\
+		\cline{2-4}
 		& 20 & Circa Valore Minino & Following car non fa un incidente e continua la sua corsa distanziandosi sempre più dalla leading car. l'accelerazione che il following algorithm pensa di dire a followingcar ha un andamento sinusoidale e crescente \\
 		\hline
-		\multirow{3}{4em}{Dopo la Convergenza} & 40 & Circa Valore Minimo & Accelerazione crescente con andamento sinusoidale. Nessun incidente ma allontanamento con movimento di Following Car in senso opposto.\\
+		\multirow{3}{12em}[-6em]{Dopo la Convergenza} & 40 & Circa Valore Minimo & Accelerazione crescente con andamento sinusoidale. Nessun incidente ma allontanamento con movimento di Following Car in senso opposto.\\
+		\cline{2-4}
 		& 45 & Circa Valore Medio & Susseguirsi di avvicinamenti e allontanamenti fra i due veicoli. Se progredita nel tempo può portare ad un lento avvicinamento e ad incidente. Accelerazione di Following Algorithm ha un andamento sinusoidale che presenta un valore di picco ed un valore minimo sempre minore.\\
+		\cline{2-4}
 		& 50 & Circa Valore Massimo & Following Car fa incidente. Accelerazione di following algorithm sinusoidale decrescente \\
 		\hline
 	\end{tabular}
+}
+\end{table}
 \end{center}
 
 \begin{figure}[H]
@@ -148,6 +160,7 @@ L'obiettivo della presente co-simulazione è quello di andare ad individuare un 
 	\item \textbf{Step\_size}: 0.01s
 \end{itemize}
 Vengono ora riportati i risultati della co-simulazione nelle immagini seguenti.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{img/MultiAttackAccelPlotXNoCrash.png}
@@ -223,15 +236,19 @@ E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a varia
 \end{itemize}
  
  I risultati ottenuti possono essere riassunti nella seguente tabella
+ 
+\renewcommand{\arraystretch}{2}
 \begin{center}
 	\begin{tabular}{ |p{6cm}|p{3cm}|p{4cm}|  }
 		\hline
 		Tempo di Simulazione& Attack Value & Risultato \\
 		\hline
 		\multirow{2}{4em}{50s} & [0, 149] & INCIDENTE \\
+		\cline{2-3}
 		& [150, 199] & NO INCIDENTE \\
 		\hline
 		\multirow{2}{4em}{100s} & [0, 199] & INCIDENTE \\
+		\cline{2-3}
 		& - & NO INCIDENTE \\
 		\hline
 	\end{tabular}
@@ -249,8 +266,9 @@ Sono stati individuati quattro diverse configurazioni che portano luogo a quattr
 	\item \textbf{Step\_size}: 0.01s
 \end{itemize}
 L'attacco pertanto avrà un pattern simile a livello temporale, la variabile è l'inizio dell'attacco stesso. I risultati degli esperimenti sono riassunti nella seguente tabella
+\renewcommand{\arraystretch}{1.5}
 \begin{center}
-	\begin{tabular}{ |p{6cm}|p{3cm}| p{4cm}|  }
+	\begin{tabular}{ |p{4cm}|p{5cm}| p{4cm}|  }
 		\hline
 		Attack Time & Distanza Minima & Risultato \\
 		\hline
