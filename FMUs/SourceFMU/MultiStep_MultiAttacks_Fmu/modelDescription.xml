@@ -52,7 +52,7 @@
 
 		<ScalarVariable name="attack_duration" valueReference="7" causality="parameter" variability="fixed"  initial="exact" ><Real start="0" /></ScalarVariable>
 
-		<ScalarVariable name="attack_occurrences" valueReference="8" causality="parameter" variability="fixed"  initial="exact" ><Real start="0" /></ScalarVariable>
+		<ScalarVariable name="attack_occurrences" valueReference="8" causality="parameter" variability="fixed"  initial="exact" ><Integer start="0" /></ScalarVariable>
 
 		<ScalarVariable name="attack_distance" valueReference="9" causality="parameter" variability="fixed"  initial="exact" ><Real start="0" /></ScalarVariable>
     </ModelVariables>

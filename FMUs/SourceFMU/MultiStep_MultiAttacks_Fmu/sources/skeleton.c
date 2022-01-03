@@ -42,7 +42,7 @@ if(first == 0){
     st.attack_value = fmiBuffer.realBuffer[2] ;
     st.step_size = fmiBuffer.realBuffer[5] ;
     st.attack_duration = fmiBuffer.realBuffer[7];
-    st.attack_occurrences = fmiBuffer.realBuffer[8];
+    st.attack_occurrences = fmiBuffer.intBuffer[8];
     st.attack_distance = fmiBuffer.realBuffer[9];
     first = 1;
 }

@@ -22,7 +22,7 @@ typedef struct {
     float64_t step_size; //-- real
     float64_t time; //-- real
     float64_t attack_duration; //-- real
-    float64_t attack_occurrences; //-- real
+    uint64_t attack_occurrences; //-- integer
     float64_t attack_distance; //-- real
 } State;
 

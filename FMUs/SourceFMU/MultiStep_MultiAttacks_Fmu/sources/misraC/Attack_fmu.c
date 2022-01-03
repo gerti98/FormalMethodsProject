@@ -12,7 +12,7 @@ void init(State* st) {
     st->step_size = 0.0f;
     st->time = 0.0f;
     st->attack_duration = 0.0f;
-    st->attack_occurrences = 0.0f;
+    st->attack_occurrences = 0;
     st->attack_distance = 0.0f;
 }
 
