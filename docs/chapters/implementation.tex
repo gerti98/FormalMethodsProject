@@ -91,7 +91,106 @@ La configurazione delle seguenti FMU verrà applicata per tutte le simulazioni c
 \subsection{Comportamento degli Attacchi}
 L'FMU che verrà utilizzata negli attacchi MITM presenterà due implementazioni diverse:
 \begin{itemize}
-\item \textbf{Attacco Semplice}: l'attacco consiste nel modificare l'input dell'FMU di attacco con il valore del parametro \textbf{attack\_value} dall'istante temporale \textbf{attack\_time} fino al termine della simulazione. Tale valore viene restituito in output dall'FMU di attacco. Tale FMU è implementata tramite il file Attack\_fmu.fmu.
-\item \textbf{Attacco Multi-step}: l'attacco consiste nel modificare l'input dell'FMU di attacco con il valore del parametro \textbf{attack\_value} per un tempo pari a \textbf{attack\_duration}, ripetuto \textbf{attack\_occurrencies} volte e separato nel tempo da \textbf{attack\_distance} secondi. Tale valore viene restituito in output dall'FMU di attacco. L'attacco inizierà dall'istante temporale \textbf{attack\_time}. Tale FMU è implementata tramite il file MultiStep\_MultiAttacks\_Fmu.fmu.
+\item \textbf{Attacco Semplice}: l'attacco consiste nel modificare l'input dell'FMU di attacco con il valore del parametro \textbf{attack\_value} dall'istante temporale \textbf{attack\_time} fino al termine della simulazione. Tale valore viene restituito in output dall'FMU di attacco. Tale FMU è implementata tramite il file Attack\_fmu.fmu. Sono pertanto riportati due estratti di codice implementativo della suddetto fmu: nel primo estratto vi è rappresentata la struttura che rappresenta lo stato dell'fmu. Nel secondo caso è rappresentata l'evoluzione dello stato ad ogni step\_size.
+
+\begin{lstlisting}[language=C++]
+	//in sources/misraC/Attack_fmu.h
+	typedef struct { 
+		Mode mode;
+		Mode previous_mode;
+		float64_t attack_time; //-- real
+		float64_t attack_value; //-- real
+		float64_t input; //-- real
+		float64_t output; //-- real
+		float64_t step_size; //-- real
+		float64_t time; //-- real
+	} State;
+
+\end{lstlisting}
+\begin{lstlisting}[language=C++]
+	//in misraC/Attack_fmu.c
+	State* tick(State* st) {
+		// assert( per_tick(st) );
+		if (st->mode == X1 && ( st->time < st->attack_time )) {
+			#ifdef DBG
+			_dbg_print_condition("st->mode == X1 && ( st->time < st->attack_time )");
+			#endif
+			leave(X1, st);
+			st->output = st->input;
+			st->time = st->time + st->step_size;
+			enter(X1, st);
+		} else if (st->mode == X1 && ( st->time >= st->attack_time )) {
+			#ifdef DBG
+			_dbg_print_condition("st->mode == X1 && ( st->time >= st->attack_time )");
+			#endif
+			leave(X1, st);
+			st->output = st->attack_value;
+			st->time = st->time + st->step_size;
+			enter(X1, st);
+		}
+		#ifdef DBG
+		_dbg_print_state(st);
+		#endif
+		return st;
+	}
+	
+\end{lstlisting}
+
+\item \textbf{Attacco Multi-step}: l'attacco consiste nel modificare l'input dell'FMU di attacco con il valore del parametro \textbf{attack\_value} per un tempo pari a \textbf{attack\_duration}, ripetuto \textbf{attack\_occurrencies} volte e separato nel tempo da \textbf{attack\_distance} secondi. Tale valore viene restituito in output dall'FMU di attacco. L'attacco inizierà dall'istante temporale \textbf{attack\_time}. Tale FMU è implementata tramite il file MultiStep\_MultiAttacks\_Fmu.fmu. Sono mostrati pertanto due estratti della relativa documentazione: nel primo estratto viene rappresentata la differenza in termini di stato dell'Fmu rispetto al caso precedente. Nel secondo estratto viene rappresentata l'evoluzione dello stato dell'Fmu.
 
 \end{itemize}
+
+\begin{lstlisting}[language=C++]
+	
+	//in sources/misraC/Attack_fmu.h
+	//Sono sottolineate le modifiche alla struttura dello stato
+	typedef struct { 
+		...
+		float64_t attack_duration; //-- real
+		uint64_t attack_occurrences; //-- integer
+		float64_t attack_distance; //-- real
+	} State;
+	
+\end{lstlisting}
+\begin{lstlisting}[language=C++]
+	//in misraC/Attack_fmu.c
+	//Sono sottolineate le modifiche alla tick function
+	bool under_attack(State* st){
+		float64_t attack_time_i;
+		if(st->time >= st->attack_time) {
+			for (unsigned int i = 0; i < st->attack_occurrences; ++i){
+				//individuo l'inizio di ogni intervallo di attacco
+				attack_time_i = st->attack_time + (st->attack_duration + st->attack_distance)*i;
+				//vedo se sono nel mezzo di un intervallo
+				if(st->time >= attack_time_i && st->time <= attack_time_i + st->attack_duration)
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	State* tick(State* st) {
+		// assert( per_tick(st) );
+		if (st->mode == X1 && !under_attack(st)) {
+			#ifdef DBG
+			_dbg_print_condition("st->mode == X1 && ( st->time < st->attack_time )");
+			#endif
+			leave(X1, st);
+			st->output = st->input;
+			st->time = st->time + st->step_size;
+			enter(X1, st);
+		} else if (st->mode == X1 && under_attack(st)) {
+			#ifdef DBG
+			_dbg_print_condition("st->mode == X1 && ( st->time >= st->attack_time )");
+			#endif
+			leave(X1, st);
+			st->output = st->attack_value;
+			st->time = st->time + st->step_size;
+			enter(X1, st);
+		}
+		#ifdef DBG
+		_dbg_print_state(st);
+		#endif
+		return st;
+	}
+\end{lstlisting}
