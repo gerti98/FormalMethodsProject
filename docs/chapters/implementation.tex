@@ -91,7 +91,7 @@ La configurazione delle seguenti FMU verrà applicata per tutte le simulazioni c
 \subsection{Comportamento degli Attacchi}
 L'FMU che verrà utilizzata negli attacchi MITM presenterà due implementazioni diverse:
 \begin{itemize}
-\item \textbf{Attacco Semplice}: l'attacco consiste nel modificare l'input dell'FMU di attacco con il valore del parametro \textbf{attack\_value} dall'istante temporale \textbf{attack\_time} fino al termine della simulazione. Tale valore viene restituito in output dall'FMU di attacco. Tale FMU è implementata tramite il file Attack\_fmu.fmu. Sono pertanto riportati due estratti di codice implementativo della suddetto fmu: nel primo estratto vi è rappresentata la struttura che rappresenta lo stato dell'fmu. Nel secondo caso è rappresentata l'evoluzione dello stato ad ogni step\_size.
+\item \textbf{Attacco Semplice}: l'attacco consiste nel modificare l'input dell'FMU di attacco con il valore del parametro \textbf{attack\_value} dall'istante temporale \textbf{attack\_time} fino al termine della simulazione. Tale valore viene restituito in output dall'FMU di attacco. Tale FMU è implementata tramite il file Attack\_fmu.fmu. Sono pertanto riportati due estratti di codice implementativo della suddetta FMU: nel primo estratto vi è rappresentata la struttura che rappresenta lo stato dell'fmu. Nel secondo caso è rappresentata l'evoluzione dello stato ad ogni step\_size.
 
 \begin{lstlisting}[language=C++]
 	//in sources/misraC/Attack_fmu.h

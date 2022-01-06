@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  4 JAN 2022 09:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.24)  6 JAN 2022 10:37
 entering extended mode
 **./documentation.tex
 (documentation.tex
@@ -544,29 +544,29 @@ put line 34.
 (pdftex.def)             Requested size: 452.9679pt x 243.68436pt.
  [12 <./img/accel_speed.png>]
 [13 <./img/PlotPercentageIncidenteAttackAccel.png>]
-<img/AttackAccel1X.png, id=124, 1049.9225pt x 565.11125pt>
+<img/AttackAccel1X.png, id=126, 1049.9225pt x 565.11125pt>
 File: img/AttackAccel1X.png Graphic file (type png)
 <use img/AttackAccel1X.png>
 Package pdftex.def Info: img/AttackAccel1X.png  used on input line 62.
 (pdftex.def)             Requested size: 452.9679pt x 243.80365pt.
-<img/AttackAccel1Speed.png, id=125, 1051.93pt x 566.115pt>
+<img/AttackAccel1Speed.png, id=127, 1051.93pt x 566.115pt>
 File: img/AttackAccel1Speed.png Graphic file (type png)
 <use img/AttackAccel1Speed.png>
 Package pdftex.def Info: img/AttackAccel1Speed.png  used on input line 68.
 (pdftex.def)             Requested size: 452.9679pt x 243.77023pt.
  [14 <./img/AttackAccel1X.png>]
-<img/AttackAccel1Accel.png, id=129, 1053.9375pt x 567.11874pt>
+<img/AttackAccel1Accel.png, id=131, 1053.9375pt x 567.11874pt>
 File: img/AttackAccel1Accel.png Graphic file (type png)
 <use img/AttackAccel1Accel.png>
 Package pdftex.def Info: img/AttackAccel1Accel.png  used on input line 74.
 (pdftex.def)             Requested size: 452.9679pt x 243.7438pt.
-<img/AttackAccel1AccelAlgo.png, id=130, 1050.92625pt x 569.12625pt>
+<img/AttackAccel1AccelAlgo.png, id=132, 1050.92625pt x 569.12625pt>
 File: img/AttackAccel1AccelAlgo.png Graphic file (type png)
 <use img/AttackAccel1AccelAlgo.png>
 Package pdftex.def Info: img/AttackAccel1AccelAlgo.png  used on input line 80.
 (pdftex.def)             Requested size: 452.9679pt x 245.30135pt.
  [15 <./img/AttackAccel1Speed.png> <./img/AttackAccel1Accel.png>]
-<img/AttackAccel-1XZoomed.png, id=134, 1051.93pt x 568.1225pt>
+<img/AttackAccel-1XZoomed.png, id=136, 1051.93pt x 568.1225pt>
 File: img/AttackAccel-1XZoomed.png Graphic file (type png)
 <use img/AttackAccel-1XZoomed.png>
 Package pdftex.def Info: img/AttackAccel-1XZoomed.png  used on input line 99.
@@ -582,37 +582,37 @@ Underfull \hbox (badness 1394) in paragraph at lines 136--136
  []
 
 [17 <./img/AttackAccel-1XZoomed.png>]
-<img/AttackAccel0T40X.png, id=143, 1051.93pt x 568.1225pt>
+<img/AttackAccel0T40X.png, id=144, 1051.93pt x 568.1225pt>
 File: img/AttackAccel0T40X.png Graphic file (type png)
 <use img/AttackAccel0T40X.png>
 Package pdftex.def Info: img/AttackAccel0T40X.png  used on input line 144.
 (pdftex.def)             Requested size: 452.9679pt x 244.63466pt.
-<img/AttackAccel0T45X.png, id=144, 1052.93375pt x 565.11125pt>
+<img/AttackAccel0T45X.png, id=145, 1052.93375pt x 565.11125pt>
 File: img/AttackAccel0T45X.png Graphic file (type png)
 <use img/AttackAccel0T45X.png>
 Package pdftex.def Info: img/AttackAccel0T45X.png  used on input line 150.
 (pdftex.def)             Requested size: 452.9679pt x 243.11382pt.
  [18 <./img/AttackAccel0T40X.png>]
-<img/AttackAccel0T50X.png, id=149, 1052.93375pt x 568.1225pt>
+<img/AttackAccel0T50X.png, id=150, 1052.93375pt x 568.1225pt>
 File: img/AttackAccel0T50X.png Graphic file (type png)
 <use img/AttackAccel0T50X.png>
 Package pdftex.def Info: img/AttackAccel0T50X.png  used on input line 156.
 (pdftex.def)             Requested size: 452.9679pt x 244.40927pt.
 
 [19 <./img/AttackAccel0T45X.png> <./img/AttackAccel0T50X.png>]
-<img/MultiAttackAccelPlotXNoCrash.png, id=153, 1050.92625pt x 567.11874pt>
+<img/MultiAttackAccelPlotXNoCrash.png, id=154, 1050.92625pt x 567.11874pt>
 File: img/MultiAttackAccelPlotXNoCrash.png Graphic file (type png)
 <use img/MultiAttackAccelPlotXNoCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotXNoCrash.png  used on input li
 ne 178.
 (pdftex.def)             Requested size: 452.9679pt x 244.43608pt.
-<img/MultiAttackAccelPlotAccelNoCrash.png, id=154, 1048.91875pt x 565.11125pt>
+<img/MultiAttackAccelPlotAccelNoCrash.png, id=155, 1048.91875pt x 565.11125pt>
 File: img/MultiAttackAccelPlotAccelNoCrash.png Graphic file (type png)
 <use img/MultiAttackAccelPlotAccelNoCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotAccelNoCrash.png  used on inpu
 t line 184.
 (pdftex.def)             Requested size: 452.9679pt x 244.03647pt.
-<img/MultiAttackAccelPlotSpeedNoCrash.png, id=155, 1051.93pt x 567.11874pt>
+<img/MultiAttackAccelPlotSpeedNoCrash.png, id=156, 1051.93pt x 567.11874pt>
 File: img/MultiAttackAccelPlotSpeedNoCrash.png Graphic file (type png)
 <use img/MultiAttackAccelPlotSpeedNoCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotSpeedNoCrash.png  used on inpu
@@ -620,19 +620,19 @@ t line 189.
 (pdftex.def)             Requested size: 452.9679pt x 244.20244pt.
  [20 <./img/MultiAttackAccelPlotXNoCrash.png>] [21 <./img/MultiAttackAccelPlotA
 ccelNoCrash.png> <./img/MultiAttackAccelPlotSpeedNoCrash.png>]
-<img/MultiAttackAccelPlotXCrash.png, id=162, 1050.92625pt x 565.11125pt>
+<img/MultiAttackAccelPlotXCrash.png, id=163, 1050.92625pt x 565.11125pt>
 File: img/MultiAttackAccelPlotXCrash.png Graphic file (type png)
 <use img/MultiAttackAccelPlotXCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotXCrash.png  used on input line
  209.
 (pdftex.def)             Requested size: 452.9679pt x 243.57083pt.
-<img/MultiAttackAccelPlotAccelCrash.png, id=163, 1052.93375pt x 569.12625pt>
+<img/MultiAttackAccelPlotAccelCrash.png, id=164, 1052.93375pt x 569.12625pt>
 File: img/MultiAttackAccelPlotAccelCrash.png Graphic file (type png)
 <use img/MultiAttackAccelPlotAccelCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotAccelCrash.png  used on input 
 line 215.
 (pdftex.def)             Requested size: 452.9679pt x 244.8411pt.
-<img/MultiAttackAccelPlotSpeedCrash.png, id=164, 1051.93pt x 567.11874pt>
+<img/MultiAttackAccelPlotSpeedCrash.png, id=165, 1051.93pt x 567.11874pt>
 File: img/MultiAttackAccelPlotSpeedCrash.png Graphic file (type png)
 <use img/MultiAttackAccelPlotSpeedCrash.png>
 Package pdftex.def Info: img/MultiAttackAccelPlotSpeedCrash.png  used on input 
@@ -640,45 +640,69 @@ line 220.
 (pdftex.def)             Requested size: 452.9679pt x 244.20244pt.
  [22 <./img/MultiAttackAccelPlotXCrash.png>] [23 <./img/MultiAttackAccelPlotAcc
 elCrash.png> <./img/MultiAttackAccelPlotSpeedCrash.png>]
-<img/AttackXSimulation.png, id=171, 1124.2pt x 843.15pt>
+<img/AttackXSimulation.png, id=172, 1124.2pt x 843.15pt>
 File: img/AttackXSimulation.png Graphic file (type png)
 <use img/AttackXSimulation.png>
 Package pdftex.def Info: img/AttackXSimulation.png  used on input line 238.
 (pdftex.def)             Requested size: 452.9679pt x 339.72418pt.
- [24 <./img/AttackXSimulation.png>]) [25] [26]
+ [24 <./img/AttackXSimulation.png>] [25]
+<img/MultiAttackXT10.png, id=180, 1547.7825pt x 1047.915pt>
+File: img/MultiAttackXT10.png Graphic file (type png)
+<use img/MultiAttackXT10.png>
+Package pdftex.def Info: img/MultiAttackXT10.png  used on input line 308.
+(pdftex.def)             Requested size: 452.9679pt x 306.6698pt.
+<img/MultiAttackXT30.png, id=181, 1540.75626pt x 1046.91125pt>
+File: img/MultiAttackXT30.png Graphic file (type png)
+<use img/MultiAttackXT30.png>
+Package pdftex.def Info: img/MultiAttackXT30.png  used on input line 313.
+(pdftex.def)             Requested size: 452.9679pt x 307.78183pt.
+<img/MultiAttackXT50.png, id=182, 1661.20625pt x 1014.79124pt>
+File: img/MultiAttackXT50.png Graphic file (type png)
+<use img/MultiAttackXT50.png>
+Package pdftex.def Info: img/MultiAttackXT50.png  used on input line 317.
+(pdftex.def)             Requested size: 452.9679pt x 276.70708pt.
+ [26 <./img/MultiAttackXT10.png>]
+<img/MultiAttackXT70.png, id=186, 1556.81625pt x 1027.84pt>
+File: img/MultiAttackXT70.png Graphic file (type png)
+<use img/MultiAttackXT70.png>
+Package pdftex.def Info: img/MultiAttackXT70.png  used on input line 321.
+(pdftex.def)             Requested size: 452.9679pt x 299.05403pt.
+ [27 <./img/MultiAttackXT30.png> <./img/MultiAttackXT50.png>])
+[28 <./img/MultiAttackXT70.png>]
 \openout2 = `chapters/conclusion.aux'.
 
-
-(chapters/conclusion.tex) [27
-
+ (chapters/conclusion.tex) [29
 
 
-] (documentation.aux (chapters/intro.aux)
-(chapters/design.aux) (chapters/implementation.aux) (chapters/result.aux)
-(chapters/conclusion.aux)) ) 
+
+]
+(documentation.aux (chapters/intro.aux) (chapters/design.aux)
+(chapters/implementation.aux) (chapters/result.aux) (chapters/conclusion.aux)) 
+) 
 Here is how much of TeX's memory you used:
- 8508 strings out of 480236
- 131664 string characters out of 2880557
- 910527 words of memory out of 3000000
- 24899 multiletter control sequences out of 15000+200000
+ 8532 strings out of 480236
+ 132276 string characters out of 2880557
+ 910620 words of memory out of 3000000
+ 24919 multiletter control sequences out of 15000+200000
  541801 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,12n,77p,838b,1348s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfo
-ur/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/gxhan/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gxhan/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/User
-s/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-<C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-r6.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmti12.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmtt10.pfb>
-Output written on documentation.pdf (28 pages, 1372105 bytes).
+ <C:\Users\gxhan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1
+200.pk><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmbxti10.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/gxhan/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/gxhan/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/gxhan/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/gxh
+an/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/
+Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12
+.pfb><C:/Users/gxhan/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmtt10.pfb>
+Output written on documentation.pdf (30 pages, 1634126 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
+ 232 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 136 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

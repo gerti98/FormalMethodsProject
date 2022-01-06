@@ -22,9 +22,9 @@ Dalla figura sopra riportata è inoltre osservabile come negli istanti iniziali 
 \subsection{Attacco all'accelerazione}
 \subsubsection{Attacco Semplice}
 \subparagraph{Risultati DSE}
-Come primo approccio all'analisi al sistema è stato scelto di fare uso del DSE, configurato andando a variare l'\textbf{attack\_value} e l'\textbf{attack\_time} con i seguenti parametri::
+Come primo approccio all'analisi al sistema è stato scelto di fare uso del DSE, configurato andando a variare l'\textbf{attack\_value} e l'\textbf{attack\_time} con i seguenti parametri:
 \begin{itemize}
-	\item \textbf{Attack\_value}: [-5, -1, 0, 1, 5]
+	\item \textbf{Attack\_value}: [-5, -1, 0, 1, 5] $m/s^2$
 	\item \textbf{Attack\_time}: [0s, .., 40s] con step a 5
 \end{itemize}
 I risultati ottenuti sono stati successivamente eleborati così da estrapolare il seguente grafico che mostra la percentuale degli incidenti per ogni \textbf{attack\_value} al variare di \textbf{attack\_time}. Per individuare le condizioni di attacco è stato necessario estrapolare la distanza minima delle due macchine sull'intero tempo di simulazione.
@@ -39,20 +39,20 @@ I risultati ottenuti sono stati successivamente eleborati così da estrapolare i
 Come si può notare, è possibile individuare tre casi ben distinti:
 \begin{itemize}
 	\item \textbf{Attacchi con accelerazione negativa}: La Following Car è portata a rallentare con andamento lineare fino a cambiare la propria direzione di marcia. In questo caso le macchine tendono ad allontanarsi e l'incidente non avrà luogo nel dominio dell'esperimento. Inoltre è doveroso sottolineare che la Following Car perde completamente la capacità di inseguimento della Leading Car. Non ci sarà quindi convergenza fra le due vetture.
-	\item \textbf{Attacchi con accelerazione pari a 0}: Dal grafico emerge una chiara necessità di uno studio più approfondito di questa casistica in quanto non si delinea alcun risultato conclusivo. Essendo che l'accelerazione resta costante e pari a 0, la velocità della Following Car rimane costante al valore nel momento \textbf{Attack\_time}. La presenza o meno di incidenti dipende quindi proprio dal valore della velocità e quindi da \textbf{Attack\_time}
+	\item \textbf{Attacchi con accelerazione pari a 0 $m/s^2$}: Dal grafico emerge una chiara necessità di uno studio più approfondito di questa casistica in quanto non si delinea alcun risultato conclusivo. Essendo che l'accelerazione resta costante e pari a 0 $m/s^2$, la velocità della Following Car rimane costante al valore nel momento \textbf{Attack\_time}. La presenza o meno di incidenti dipende quindi proprio dal valore della velocità e quindi da \textbf{Attack\_time}
 	\item \textbf{Attacchi con accelerazione positiva}: La Following Car è portata ad aumentare la propria velocità con andamento lineare. In questo caso le macchine tendono ad avvicinarsi e l'incidente avrà luogo.
 \end{itemize}
 Esistono tuttavia condizioni speciali che è doveroso sottolineare:
 \begin{itemize}
-	\item \textbf{Attacchi con accelerazione negativa}: Se la Leading Car decellerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la Following Car sotto attacco, allora in tal caso l'incidente avverrebbe.
+	\item \textbf{Attacchi con accelerazione negativa}: Se la Leading Car decelerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la Following Car sotto attacco, allora in tal caso l'incidente avverrebbe.
 	\item \textbf{Attacchi con accelerazione positiva}: Se la Leading Car accelerasse con continuità (per un intervallo di tempo sufficientemente ampio ) più di quanto non faccia la Following Car sotto attacco, allora in tal caso l'incidente non avverrebbe.
 \end{itemize}
 \paragraph{Risultati Co-Simulazione}
 Con l'obiettivo di rafforzare quanto appena descritto  e individuato tramite l'analisi dei risultati del DSE, vengono qui riportati tre casi fondamentali.
-\subparagraph{Attacchi con accelerazione positiva pari a 1} Di seguito sono riportati i grafici in cui sono raffigurati le posizioni (Fig. 12), le velocità (Fig. 13) le accelerazioni (Fig. 14) delle macchine e l'accelerazione dell'algoritmo di inseguimento (Fig. 15).
+\subparagraph{Attacchi con accelerazione positiva pari a 1 $m/s^2$} Di seguito sono riportati i grafici in cui sono raffigurati le posizioni (Fig. 12), le velocità (Fig. 13) le accelerazioni (Fig. 14) delle macchine e l'accelerazione dell'algoritmo di inseguimento (Fig. 15).
 L'attacco è stato eseguito con:
 \begin{itemize}
-	\item \textbf{attack\_value}: 1
+	\item \textbf{attack\_value}: 1 $m/s^2$
 	\item \textbf{attack\_time}: 20s
 \end{itemize}
 
@@ -87,11 +87,11 @@ Dalle osservazioni fatte si può evincere quanto segue:
 	\item L'accellerazione che Following Algorithm pensa di dire a Following Car è sempre minore con andamento non lineare. Avrà sicuramente delle micro-oscillazioni ma sono quasi impercettibili a causa dell'elevata distanza dalla Leading Car. Quindi una decellerazione/accellerazione della Leading Car ha un effetto quasi trascurabile su Following Algorithm
 \end{itemize}
 
-\subparagraph{Attacchi con accelerazione negativa pari a -1}
+\subparagraph{Attacchi con accelerazione negativa pari a -1 $m/s^2$}
 Di seguito viene riportato il grafico raffigurate le posizioni dei due veicoli (Fig. 16). I grafici di velocità e accelerazione sono deducibili dal lettore osservando quelli dell'attacco precedente.
 L'attacco è stato eseguito con:
 \begin{itemize}
-	\item \textbf{attack\_value}: -1
+	\item \textbf{attack\_value}: -1 $m/s^2$
 	\item \textbf{attack\_time}: 20s
 \end{itemize}
 \begin{figure}[H]
@@ -107,8 +107,8 @@ Dalle osservazioni fatte si può evincere quanto segue:
 	\item Ogni considerazione fatta nel caso precedente rispetto all'accelerazione che Following Algorithm pensa di dire a Following  Car è tutt'ora valida e speculare al caso precedente.
 \end{itemize}
 
-\subparagraph{Attacchi con accelerazione pari a 0}
-Nella tabella seguente sono riportati le diverse simulazioni effettuate per il caso \textbf{attack\_value = 0}. Per ogni casistica viene indicato il diverso tempo di attacco, una idea approssimativa della velocità a cui la Following Car si stabilizza ed infine una breve descrizione di alcune osservazioni fatte sul risultato ottenuto (considerando il nostro dominio di simulazione).
+\subparagraph{Attacchi con accelerazione pari a 0 $m/s^2$}
+Nella tabella seguente sono riportati le diverse simulazioni effettuate per il caso \textbf{attack\_value = 0 $m/s^2$}. Per ogni casistica viene indicato il diverso tempo di attacco, una idea approssimativa della velocità a cui la Following Car si stabilizza ed infine una breve descrizione di alcune osservazioni fatte sul risultato ottenuto (considerando il nostro dominio di simulazione).
 
 \renewcommand{\arraystretch}{1.5}
 \begin{center}
@@ -117,7 +117,7 @@ Nella tabella seguente sono riportati le diverse simulazioni effettuate per il c
 		\resizebox{\textwidth}{!}{%resizing the whole table
 	\begin{tabular}{ |l|l|l|p{8cm}|  }
 		\hline
-		Stato Convergenza & Tempo di Attacco & Valore Velocità Following Car dopo Attacco& Risultato \\
+		Stato Convergenza & Tempo di Attacco [s]& Valore Velocità Following Car dopo Attacco& Risultato \\
 		\hline
 		\multirow{3}{7em}[-6em]{\centering Prima della Convergenza} & 10 & Circa Valore Massimo & La following car fa un incidente. Accelerazione risultato di Following Algorithm ha andamento sinusoidale decrescente, posizione leading car non trascurabile \\
 		\cline{2-4}
@@ -167,7 +167,7 @@ L'obiettivo della presente co-simulazione è quello di andare ad individuare un 
 	\item \textbf{Attack\_occurrencies}: 2
 	\item \textbf{Attack\_duration}: 5s
 	\item \textbf{Attack\_time}: 30s
-	\item \textbf{Attack\_value}: -5
+	\item \textbf{Attack\_value}: -5 $m/s^2$
 	\item \textbf{Attack\_distance}: 10s
 	\item \textbf{Step\_size}: 0.01s
 \end{itemize}
@@ -198,7 +198,7 @@ L'obiettivo della presente co-simulazione è quello di andare ad individuare un 
 \item \textbf{Attack\_occurrencies}: 2
 \item \textbf{Attack\_duration}: 2s
 \item \textbf{Attack\_time}: 30s
-\item \textbf{Attack\_value}: +2
+\item \textbf{Attack\_value}: +2 $m/s^2$
 \item \textbf{Attack\_distance}: 5s
 \item \textbf{Step\_size}: 0.01s
 \end{itemize}
@@ -228,7 +228,7 @@ Osservando i grafici sopra descritti è possibile osservare come il secondo even
 \subparagraph{Risultati Co-Simulazione}
 Per cercare di dare un'interpretazione ai risultati del successivo studio verrà prima analizzato un caso d'esempio con i seguenti parametri:
 \begin{itemize}
-	\item \textbf{attack\_value}: 200
+	\item \textbf{attack\_value}: 200m
 	\item \textbf{attack\_time}: 20s
 \end{itemize}
 
@@ -238,12 +238,19 @@ Si ottiene il seguente grafico:
 	\includegraphics[width=\textwidth]{img/AttackXSimulation.png}
 	\caption{Posizione x della Leading Car (verde) e Following Car (blu)}
 \end{figure}
-Dal seguente risultato è possibile evincere tre differenti zone di comportamento della Following Car nel dominio dell'esperimento: nel \textbf{primo caso} nel quale l'attacco non viene ancora effettuato, la Following Car tende ad avvicinarsi alla Leading Car alla distanza configurata; nel \textbf{secondo caso}, da un tempo di 20s ad uno di circa 40s, l'attacco inizierà ma la Leading Car non avrà superato ancora l'\textbf{attack\_value} impostato, che rappresenta la (alterata) posizione della Following Car: quest'ultima penserà di trovarsi davanti e decelererà; il \textbf{terzo caso}, dopo 40s, nel quale la Leading Car ha superato l'attack value e perciò la Following Car inizierà a riavvicinarsi fino all'impatto tra le due auto.
-Nel dominio dell'esperimento la leading car tende ad andare "in avanti" continuamente con qualche oscillazione nella velocità, è facile intuire che \textbf{un incidente con questo tipo di attacco avrà luogo con alta probabilità per valori di attack value nel dominio dell'esperimento}, in quanto molto probabilmente la Leading Car supererà l'attack\_value per un tempo significativo per permettere alla following car di superarla.  
+Dal seguente risultato è possibile evincere tre differenti zone di comportamento della Following Car nel dominio dell'esperimento: 
+\begin{itemize}
+	\item \textbf{Primo Caso}: Da 0s a 20s, nel quale l'attacco non è ancora attivo e la following car tenderà ad avvicinarsi alla leading car mantenendo la distanza configurata di 15m.
+	\item \textbf{Secondo Caso}: Da 20s a circa 40s, nel quale l'attacco avrà inizio, portando all'allontanamento delle due vetture. Questo è dovuto al fatto che la posizione della leading car è inferiore rispetto a quella dell'attack\_value che rappresenta la posizione della following car vista dal Following Algorithm. Per questo motivo, il Following Algorithm calcolerà un'accelerazione negativa per la Following Car.
+	\item \textbf{Terzo Caso}: Da 40s in poi, nel quale la Leading Car avrà superato il valore di attack\_value e il Following Algorithm calcolerà un valore di accelerazione positiva per la Following Car. Questo caso porterà all'impatto tra le due vetture.
+\end{itemize}
+
+Nel dominio dell'esperimento la leading car tende ad andare "in avanti" continuamente con qualche oscillazione nella velocità, è facile intuire che \textbf{un incidente con questo tipo di attacco avrà luogo con alta probabilità per valori di attack value nel dominio dell'esperimento}, in quanto molto probabilmente la Leading Car supererà l'attack\_value per un tempo significativo per permettere alla Following Car di superarla.
+  
 \subparagraph{Risultati DSE}
 E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a variare l'\textbf{attack\_value} e l'\textbf{attack\_time} con i seguenti parametri:
 \begin{itemize}
-	\item \textbf{Attack\_value}: [0 .. 200] con step a 1
+	\item \textbf{Attack\_value}: [0m .. 200m] con step a 1
 	\item \textbf{Simulation\_time}: [50s, 100s]
 \end{itemize}
  
@@ -253,13 +260,13 @@ E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a varia
 \begin{center}
 	\begin{tabular}{ |p{6cm}|p{3cm}|p{4cm}|  }
 		\hline
-		Tempo di Simulazione& Attack Value & Risultato \\
+		Tempo di Simulazione [s]& Attack Value [m] & Risultato \\
 		\hline
-		\multirow{2}{4em}{50s} & [0, 149] & INCIDENTE \\
+		\multirow{2}{4em}{50} & [0, 149] & INCIDENTE \\
 		\cline{2-3}
 		& [150, 199] & NO INCIDENTE \\
 		\hline
-		\multirow{2}{4em}{100s} & [0, 199] & INCIDENTE \\
+		\multirow{2}{4em}{100} & [0, 199] & INCIDENTE \\
 		\cline{2-3}
 		& - & NO INCIDENTE \\
 		\hline
@@ -268,12 +275,12 @@ E' stato studiato l'esito dell'attacco (INCIDENTE/NON INCIDENTE) andando a varia
 Come si può notare il tempo è una variabile importante per questo tipo di attacco, con un tempo sufficientemente alto dell'esperimento l'attacco ha sempre luogo nel dominio dell'esperimento.
 
 \subsection{Attacco Multiplo}
-Sono state individuate quattro diverse configurazioni che danno luogo a quattro classi di risultati diversi:
+Sono state individuate tre diverse configurazioni che danno luogo a quattro classi di risultati diversi:
 \begin{itemize}
 	\item \textbf{Attack\_occurrencies}: 3
 	\item \textbf{Attack\_duration}: 2s
 	\item \textbf{Attack\_time}: [30s, 50s, 70s]
-	\item \textbf{Attack\_value}: 200
+	\item \textbf{Attack\_value}: 200m
 	\item \textbf{Attack\_distance}: 5s
 	\item \textbf{Step\_size}: 0.01s
 \end{itemize}
@@ -282,14 +289,38 @@ L'attacco pertanto avrà un pattern simile a livello temporale, la variabile è 
 \begin{center}
 	\begin{tabular}{ |p{4cm}|p{5cm}| p{4cm}|  }
 		\hline
-		Attack Time & Distanza Minima & Risultato \\
+		Attack Time [s] & Distanza Minima [m] & Risultato \\
 		\hline
-		30s & 14.9368 & NO INCIDENTE \\
+		10 & 14.9326 & NO INCIDENTE \\
 		\hline
-		50s & 0.639284 & NO INCIDENTE \\
+		30 & 14.9368 & NO INCIDENTE \\
 		\hline
-		70s & -20.38 & INCIDENTE \\
+		50 & 0.639284 & NO INCIDENTE \\
+		\hline
+		70 & -20.38 & INCIDENTE \\
 		\hline
 	\end{tabular}
 \end{center}
+
+Le seguenti quattro figure vengono rappresentati i relativi grafici della posizione delle due auto.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/MultiAttackXT10.png}
+	\caption{Grafico delle posizioni di Leading e Following Car e output dell'Attack\_fmu per attack\_time a 10.}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{img/MultiAttackXT30.png}
+	\caption{Grafico delle posizioni di Leading e Following Car e output dell'Attack\_fmu per attack\_time a 30.}
+\end{figure}\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/MultiAttackXT50.png}
+\caption{Grafico delle posizioni di Leading e Following Car e output dell'Attack\_fmu per attack\_time a 50.}
+\end{figure}\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/MultiAttackXT70.png}
+\caption{Grafico delle posizioni di Leading e Following Car e output dell'Attack\_fmu per attack\_time a 70.}
+\end{figure}
+
+  
 Una semplice interpretazione di questi risultati si basa sul fatto che il Following Algorithm produce un'accelerazione maggiore nel caso la distanza tra le due auto sia maggiore. Premettendo che la distanza della Following Car vista dal Following Algorithm è fissa (per via dell'attacco in corso), con un tempo di inizio di attacco più elevato, la distanza tra la Leading Car e la Following Car assumerà valori più elevati. Questo porterà ad un'accelerazione in input alla Following Car maggiore negli intervalli di tempo in cui l'attacco avrà luogo. Per questo motivo con un attack time pari a 70s vi è un incidente.
